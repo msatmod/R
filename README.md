@@ -31,6 +31,16 @@ R Programming for Beginners - SkillUP by Simplilearn
 - [x] [Day 15](https://www.kaggle.com/code/megasatish/data-visualization) - Data Visualization
 - [x] [Day 16](https://www.kaggle.com/code/megasatish/time-series-analysis-in-r) - Time Series Analysis in R
 
+Data Science with R Programming - SkillUP by Simplilearn
 
-
+- [x] [Day 17](https://www.coursicle.com/umn/courses/MSBA/6130/) - Introduction to Business Analytics
+- [x] [Day 18](https://www.r-project.org/about.html) - Introduction to R Programming
+- [x] [Day 19](https://www.kaggle.com/code/megasatish/vectors-lists-matrix-in-r) - Data Structures
+- [x] [Day 20](https://www.kaggle.com/code/megasatish/data-manipulation-in-r) - Data Manipulation
+- [x] [Day 21](https://www.kaggle.com/code/megasatish/data-visualization) - Data Visualization
+- [x] [Day 22](https://towardsdatascience.com/fundamentals-of-statistics-for-data-scientists-and-data-analysts-69d93a05aae7) - Statistics for Data Science 
+- [x] [Day 23](https://www.kaggle.com/code/megasatish/regression-analysis) - Regression Analysis
+- [x] [Day 24](https://www.kaggle.com/code/megasatish/classification) - Classification
+- [x] [Day 25](https://www.statmethods.net/advstats/cluster.html) - Clustering
+- [x] [Day 26](https://www.kaggle.com/code/megasatish/association) - Association
 

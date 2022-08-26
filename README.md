@@ -1,5 +1,12 @@
-# R
-R
+# R 
+
+### [R Programming Language](https://www.r-project.org/) - _Documentation_
+
+### [RStudio](https://www.rstudio.com/) - _IDE_
+
+### [Kaggle](https://www.kaggle.com/) - _Online IDE_
+
+---
 
 Getting Started with R Programming
 

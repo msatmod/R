@@ -33,28 +33,26 @@ R Programming for Beginners - SkillUP by Simplilearn
 
 Data Science with R Programming - SkillUP by Simplilearn
 
-- [x] [Day 17](https://www.coursicle.com/umn/courses/MSBA/6130/) - Introduction to Business Analytics
-- [x] [Day 18](https://www.r-project.org/about.html) - Introduction to R Programming
-- [x] [Day 19](https://www.kaggle.com/code/megasatish/vectors-lists-matrix-in-r) - Data Structures
-- [x] [Day 20](https://www.kaggle.com/code/megasatish/data-manipulation-in-r) - Data Manipulation
-- [x] [Day 21](https://www.kaggle.com/code/ameythakur20/data-visualization-in-r) - Data Visualization
-- [x] [Day 22](https://towardsdatascience.com/fundamentals-of-statistics-for-data-scientists-and-data-analysts-69d93a05aae7) - Statistics for Data Science 
-- [x] [Day 23](https://www.kaggle.com/code/megasatish/regression-analysis) - Regression Analysis
-- [x] [Day 24](https://www.kaggle.com/code/megasatish/classification) - Classification
-- [x] [Day 25](https://www.statmethods.net/advstats/cluster.html) - Clustering
-- [x] [Day 26](https://www.kaggle.com/code/megasatish/association) - Association
+- [x] [Day 17](https://www.kaggle.com/code/megasatish/vectors-lists-matrix-in-r) - Data Structures
+- [x] [Day 18](https://www.kaggle.com/code/megasatish/data-manipulation-in-r) - Data Manipulation
+- [x] [Day 19](https://www.kaggle.com/code/ameythakur20/data-visualization-in-r) - Data Visualization
+- [x] [Day 20](https://towardsdatascience.com/fundamentals-of-statistics-for-data-scientists-and-data-analysts-69d93a05aae7) - Statistics for Data Science 
+- [x] [Day 21](https://www.kaggle.com/code/megasatish/regression-analysis) - Regression Analysis
+- [x] [Day 22](https://www.kaggle.com/code/megasatish/classification) - Classification
+- [x] [Day 23](https://www.statmethods.net/advstats/cluster.html) - Clustering
+- [x] [Day 24](https://www.kaggle.com/code/megasatish/association) - Association
 
 Automated EDA 
 
-- [x] [Day 27](https://www.kaggle.com/code/ameythakur20/r-libraries-for-automated-eda) - R Libraries for Automated EDA
-- [x] [Day 28](https://www.kaggle.com/code/ameythakur20/statistical-analysis-on-covid19-dataset) - Statistical Analysis on COVID Dataset
+- [x] [Day 25](https://www.kaggle.com/code/ameythakur20/r-libraries-for-automated-eda) - R Libraries for Automated EDA
+- [x] [Day 26](https://www.kaggle.com/code/ameythakur20/statistical-analysis-on-covid19-dataset) - Statistical Analysis on COVID Dataset
 
 Web Scraping in R
 
-- [x] [Day 29](https://www.kaggle.com/code/ameythakur20/web-scraping-in-r-part-i) - Web Scraping (Part I) 
-- [x] [Day 30](https://www.kaggle.com/code/ameythakur20/web-scrapping-in-r-part-ii) - Web Scraping (Part II)
-- [x] [Day 31](https://www.kaggle.com/code/ameythakur20/web-scraping-in-r-part-iii) - Web Scraping (Part III)
-- [x] [Day 32](https://www.kaggle.com/code/ameythakur20/web-scraping-in-r-part-iv) - Web Scraping (Part IV)
+- [x] [Day 27](https://www.kaggle.com/code/ameythakur20/web-scraping-in-r-part-i) - Web Scraping (Part I) 
+- [x] [Day 28](https://www.kaggle.com/code/ameythakur20/web-scrapping-in-r-part-ii) - Web Scraping (Part II)
+- [x] [Day 29](https://www.kaggle.com/code/ameythakur20/web-scraping-in-r-part-iii) - Web Scraping (Part III)
+- [x] [Day 30](https://www.kaggle.com/code/ameythakur20/web-scraping-in-r-part-iv) - Web Scraping (Part IV)
 
 ---
 

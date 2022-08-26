@@ -37,7 +37,7 @@ Data Science with R Programming - SkillUP by Simplilearn
 - [x] [Day 18](https://www.r-project.org/about.html) - Introduction to R Programming
 - [x] [Day 19](https://www.kaggle.com/code/megasatish/vectors-lists-matrix-in-r) - Data Structures
 - [x] [Day 20](https://www.kaggle.com/code/megasatish/data-manipulation-in-r) - Data Manipulation
-- [x] [Day 21](https://www.kaggle.com/code/megasatish/data-visualization) - Data Visualization
+- [x] [Day 21](https://www.kaggle.com/code/ameythakur20/data-visualization-in-r) - Data Visualization
 - [x] [Day 22](https://towardsdatascience.com/fundamentals-of-statistics-for-data-scientists-and-data-analysts-69d93a05aae7) - Statistics for Data Science 
 - [x] [Day 23](https://www.kaggle.com/code/megasatish/regression-analysis) - Regression Analysis
 - [x] [Day 24](https://www.kaggle.com/code/megasatish/classification) - Classification

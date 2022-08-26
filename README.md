@@ -7,6 +7,7 @@
 ### [Kaggle](https://www.kaggle.com/) - _Online IDE_
 
 ---
+[Certificates](https://github.com/msatmod/R/tree/main/Certificates)
 
 Getting Started with R Programming
 
@@ -45,6 +46,9 @@ Data Science with R Programming - SkillUP by Simplilearn
 Automated EDA 
 
 - [x] [Day 25](https://www.kaggle.com/code/ameythakur20/r-libraries-for-automated-eda) - R Libraries for Automated EDA
+
+Statistical Analysis
+
 - [x] [Day 26](https://www.kaggle.com/code/ameythakur20/statistical-analysis-on-covid19-dataset) - Statistical Analysis on COVID Dataset
 
 Web Scraping in R

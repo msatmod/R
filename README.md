@@ -8,7 +8,7 @@
 
 ---
 
-Getting Started with R Programming
+## Getting Started with R Programming
 
 - [x] [Day 1](https://www.kaggle.com/code/ameythakur20/day-1-getting-started-in-r) - Getting Started in R
 - [x] [Day 2](https://www.kaggle.com/code/ameythakur20/day-2-load-data-into-r/notebook) - Load Data in R
@@ -16,9 +16,9 @@ Getting Started with R Programming
 - [x] [Day 4](https://www.kaggle.com/ameythakur20/day-4-graphing-data) - Graphing Data
 
 
-R Programming for Beginners - SkillUP by Simplilearn
+## R Programming for Beginners - SkillUP by Simplilearn
 
-[Certificates](https://github.com/msatmod/R/tree/main/Certificates)
+>**Certificates - [Amey Thakur]() & [Mega Satish]()**
 
 - [x] [Day 5](https://www.r-project.org/about.html) - Introduction
 - [x] [Day 6](https://www.w3schools.com/r/r_intro.asp) - What is R Programming
@@ -33,7 +33,10 @@ R Programming for Beginners - SkillUP by Simplilearn
 - [x] [Day 15](https://www.kaggle.com/code/megasatish/data-visualization) - Data Visualization
 - [x] [Day 16](https://www.kaggle.com/code/megasatish/time-series-analysis-in-r) - Time Series Analysis in R
 
-Data Science with R Programming - SkillUP by Simplilearn
+
+## Data Science with R Programming - SkillUP by Simplilearn
+
+>**Certificates - [Amey Thakur]() & [Mega Satish]()**
 
 - [x] [Day 17](https://www.kaggle.com/code/megasatish/vectors-lists-matrix-in-r) - Data Structures
 - [x] [Day 18](https://www.kaggle.com/code/megasatish/data-manipulation-in-r) - Data Manipulation
@@ -44,15 +47,18 @@ Data Science with R Programming - SkillUP by Simplilearn
 - [x] [Day 23](https://www.statmethods.net/advstats/cluster.html) - Clustering
 - [x] [Day 24](https://www.kaggle.com/code/megasatish/association) - Association
 
-Automated EDA 
+
+## Automated EDA 
 
 - [x] [Day 25](https://www.kaggle.com/code/ameythakur20/r-libraries-for-automated-eda) - R Libraries for Automated EDA
 
-Statistical Analysis
+
+## Statistical Analysis
 
 - [x] [Day 26](https://www.kaggle.com/code/ameythakur20/statistical-analysis-on-covid19-dataset) - Statistical Analysis on COVID Dataset
 
-Web Scraping in R
+
+## Web Scraping in R
 
 - [x] [Day 27](https://www.kaggle.com/code/ameythakur20/web-scraping-in-r-part-i) - Web Scraping (Part I) 
 - [x] [Day 28](https://www.kaggle.com/code/ameythakur20/web-scrapping-in-r-part-ii) - Web Scraping (Part II)

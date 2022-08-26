@@ -7,7 +7,6 @@
 ### [Kaggle](https://www.kaggle.com/) - _Online IDE_
 
 ---
-[Certificates](https://github.com/msatmod/R/tree/main/Certificates)
 
 Getting Started with R Programming
 
@@ -18,6 +17,8 @@ Getting Started with R Programming
 
 
 R Programming for Beginners - SkillUP by Simplilearn
+
+[Certificates](https://github.com/msatmod/R/tree/main/Certificates)
 
 - [x] [Day 5](https://www.r-project.org/about.html) - Introduction
 - [x] [Day 6](https://www.w3schools.com/r/r_intro.asp) - What is R Programming

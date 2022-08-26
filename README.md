@@ -44,3 +44,15 @@ Data Science with R Programming - SkillUP by Simplilearn
 - [x] [Day 25](https://www.statmethods.net/advstats/cluster.html) - Clustering
 - [x] [Day 26](https://www.kaggle.com/code/megasatish/association) - Association
 
+Automated EDA 
+
+- [x] [Day 27](https://www.kaggle.com/code/ameythakur20/r-libraries-for-automated-eda) - R Libraries for Automated EDA
+- [x] [Day 28](https://www.kaggle.com/code/ameythakur20/statistical-analysis-on-covid19-dataset) - Statistical Analysis on COVID Dataset
+
+Web Scraping in R
+
+- [x] [Day 29](https://www.kaggle.com/code/ameythakur20/web-scraping-in-r-part-i) - Web Scraping (Part I) 
+- [x] [Day 30](https://www.kaggle.com/code/ameythakur20/web-scrapping-in-r-part-ii) - Web Scraping (Part II)
+- [x] [Day 31](https://www.kaggle.com/code/ameythakur20/web-scraping-in-r-part-iii) - Web Scraping (Part III)
+- [x] [Day 32](https://www.kaggle.com/code/ameythakur20/web-scraping-in-r-part-iv) - Web Scraping (Part IV)
+

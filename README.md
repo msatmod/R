@@ -69,4 +69,5 @@
 
 <p align="center"> <b> 👉🏻 Created to Learn R 👈🏻 <b> </p>
  
-<p align="center"><a href='https://github.com/msatmod/R', style='color: greenyellow;'> ✌🏻 Back To Repository ✌🏻</p>
+<p align="center"><a href='https://github.com/Amey-Thakur/R#readme', style='color: greenyellow;'> ✌🏻 Back To Repository ✌🏻</p>
+

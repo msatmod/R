@@ -7,6 +7,8 @@
 ### [Kaggle](https://www.kaggle.com/) - _Online IDE_
 
 ---
+ 
+ >Challenge successfully completed with [Mega Satish](https://github.com/msatmod)
 
 ## Getting Started with R Programming
 
@@ -69,6 +71,4 @@
 
 <p align="center"> <b> 👉🏻 Created to Learn R 👈🏻 <b> </p>
  
-<p align="center"><a href='https://github.com/Amey-Thakur/R#readme', style='color: greenyellow;'> ✌🏻 Back To Repository ✌🏻</p>
-
-
+<p align="center"><a href='https://github.com/Amey-Thakur/ENGINEERING', style='color: greenyellow;'> ✌🏻 Back To Engineering ✌🏻</p>

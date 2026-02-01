@@ -101,13 +101,26 @@
         <main class="container">
             <section id="progress" class="stats-container">
                 <div class="stat-card reveal stats-progress-card" onclick="animateStatsCard()">
-                    <div class="stat-header">
-                        <i class="fas fa-check-square stat-check-icon"></i>
-                        <span class="stat-label">VERIFIED COURSE MILESTONES</span>
-                    </div>
-                    <div class="stat-value-container">
-                        <span id="milestone-count" class="stat-value">30</span>
-                        <span class="stat-total">/ 30</span>
+                    <div class="stats-top-row">
+                        <div class="stat-unit">
+                            <div class="stat-header">
+                                <i class="fas fa-check-square stat-check-icon"></i>
+                                <span class="stat-label">VERIFIED COURSE MILESTONES</span>
+                            </div>
+                            <div class="stat-value-container">
+                                <span id="milestone-count" class="stat-value">30</span>
+                                <span class="stat-total">/ 30</span>
+                            </div>
+                        </div>
+                        <div class="stat-unit align-right">
+                            <div class="stat-header justify-end">
+                                <span class="stat-label">FULL COURSE CERTIFICATES</span>
+                                <i class="fas fa-certificate stat-cert-icon"></i>
+                            </div>
+                            <div class="stat-value-container">
+                                <span class="stat-value">4</span>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="stats-animation-track">
@@ -120,15 +133,9 @@
                         <div class="stats-subtle-line"></div>
                     </div>
 
-                    <div class="stat-footer-grid">
-                        <div class="stat-footer-item">
-                            <div id="mastery-count" class="stat-footer-value accent-purple">100%</div>
-                            <div class="stat-footer-label">MASTERY LEVEL</div>
-                        </div>
-                        <div class="stat-footer-item align-right">
-                            <div class="stat-footer-value">4</div>
-                            <div class="stat-footer-label">FULL COURSE CERTIFICATES</div>
-                        </div>
+                    <div class="stat-center-unit">
+                        <div id="mastery-count" class="stat-footer-value accent-purple">100%</div>
+                        <div class="stat-footer-label">MASTERY LEVEL</div>
                     </div>
                 </div>
             </section>

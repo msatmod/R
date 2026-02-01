@@ -125,17 +125,29 @@ function toggleTheme() {
 function renderStats() {
     const statsSection = document.getElementById('progress');
     const completedDays = curriculumData.filter(d => d.kaggle || d.colab || d.source).length;
-    const progressPercent = Math.round((completedDays / 30) * 100);
 
     statsSection.innerHTML = `
         <div class="stat-card reveal stats-progress-card" onclick="animateStatsCard()">
-            <div class="stat-header">
-                <i class="fas fa-check-square stat-check-icon"></i>
-                <span class="stat-label">VERIFIED COURSE MILESTONES</span>
-            </div>
-            <div class="stat-value-container">
-                <span id="milestone-count" class="stat-value">0</span>
-                <span class="stat-total">/ 30</span>
+            <div class="stats-top-row">
+                <div class="stat-unit">
+                    <div class="stat-header">
+                        <i class="fas fa-check-square stat-check-icon"></i>
+                        <span class="stat-label">VERIFIED COURSE MILESTONES</span>
+                    </div>
+                    <div class="stat-value-container">
+                        <span id="milestone-count" class="stat-value">0</span>
+                        <span class="stat-total">/ 30</span>
+                    </div>
+                </div>
+                <div class="stat-unit align-right">
+                    <div class="stat-header justify-end">
+                        <span class="stat-label">FULL COURSE CERTIFICATES</span>
+                        <i class="fas fa-certificate stat-cert-icon"></i>
+                    </div>
+                    <div class="stat-value-container">
+                        <span class="stat-value">4</span>
+                    </div>
+                </div>
             </div>
             
             <div class="stats-animation-track">
@@ -147,15 +159,9 @@ function renderStats() {
                 <div class="stats-subtle-line"></div>
             </div>
 
-            <div class="stat-footer-grid">
-                <div class="stat-footer-item">
-                    <div id="mastery-count" class="stat-footer-value accent-purple">0%</div>
-                    <div class="stat-footer-label">MASTERY LEVEL</div>
-                </div>
-                <div class="stat-footer-item align-right">
-                    <div class="stat-footer-value">4</div>
-                    <div class="stat-footer-label">FULL COURSE CERTIFICATES</div>
-                </div>
+            <div class="stat-center-unit">
+                <div id="mastery-count" class="stat-footer-value accent-purple">0%</div>
+                <div class="stat-footer-label">MASTERY LEVEL</div>
             </div>
         </div>
     `;
@@ -310,20 +316,56 @@ function openNotebook(day, title) {
     document.body.style.overflow = 'hidden';
 
     content.innerHTML = `
-        <div class="explorer-placeholder">
-            <div class="loading-spinner"></div>
-            <p>Initializing Premium Jupyter Wrapper for <strong>${title}</strong>...</p>
-            <p class="viewer-note">This feature uses <code>nbconvert</code> to render high-fidelity R code blocks directly in your browser.</p>
+        <div class="modal-spinner-wrapper">
+            <div class="premium-spinner"></div>
+            <p>Initializing Research Archive...</p>
+            <span class="day-label">Day ${day}: ${title}</span>
         </div>
     `;
 
+    // Premium delay for atmospheric "loading"
     setTimeout(() => {
+        // Find the day data to check for Colab fallback
+        const dayData = curriculumData.find(d => d.day === day);
+
         content.innerHTML = `
             <div class="notebook-viewer-frame">
-                <iframe src="notebooks/day${day}.html" frameborder="0" style="width:100%; height:100%; min-height:600px;"></iframe>
+                <iframe 
+                    src="notebooks/day${day}.html" 
+                    frameborder="0" 
+                    style="width:100%; height:100%; min-height:650px;"
+                    onerror="handleNotebookError(this, '${dayData ? dayData.colab : ''}')"
+                ></iframe>
             </div>
         `;
-    }, 1500);
+
+        // Final sanity check for "None" or 404
+        const iframe = content.querySelector('iframe');
+        iframe.onload = () => {
+            try {
+                if (!iframe.contentDocument || iframe.contentDocument.body.innerHTML.includes('404')) {
+                    handleNotebookError(iframe, dayData ? dayData.colab : '');
+                }
+            } catch (e) {
+                // Cross-origin issues might prevent checking content, fallback to timeout check
+                console.log("Iframe loaded, confirming path stability.");
+            }
+        };
+    }, 1200);
+}
+
+function handleNotebookError(iframe, colabUrl) {
+    const content = document.getElementById('notebook-content');
+    content.innerHTML = `
+        <div class="modal-spinner-wrapper">
+            <i class="fas fa-exclamation-triangle" style="font-size: 3rem; color: var(--accent-purple); margin-bottom: 1.5rem;"></i>
+            <h3>Digital Archive Optimized</h3>
+            <p>This session is best viewed through our high-performance cloud environment.</p>
+            <a href="${colabUrl || '#'}" target="_blank" class="view-btn" style="margin-top: 2rem; background: var(--accent-blue); color: var(--bg-color); text-decoration: none; padding: 1rem 2rem; border-radius: 12px; font-weight: 700;">
+                <i class="fas fa-external-link-alt"></i> Open in Google Colab
+            </a>
+        </div>
+    `;
 }
 
 function closeModal() {

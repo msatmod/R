@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function moveSplashProgress() {
     const splashBar = document.getElementById('splash-progress-bar');
+    const splashIcon = document.getElementById('splash-r-icon');
     let width = 0;
     const interval = setInterval(() => {
         if (width >= 100) {
@@ -22,6 +23,7 @@ function moveSplashProgress() {
             width += Math.random() * 5;
             if (width > 100) width = 100;
             if (splashBar) splashBar.style.width = width + '%';
+            if (splashIcon) splashIcon.style.left = width + '%';
         }
     }, 50);
 }

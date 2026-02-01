@@ -6,12 +6,16 @@ document.addEventListener('DOMContentLoaded', () => {
     renderCurriculum('all');
     setupEventListeners();
     initScrollAnimations();
+    initSecurity();
 
-    // Start splash progress
+    // Start animations
     moveSplashProgress();
-
-    // Start stats animation after splash disappears
     setTimeout(animateStatsCard, 2000);
+
+    // Register PWA Service Worker
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('sw.js').catch(console.error);
+    }
 });
 
 function moveSplashProgress() {

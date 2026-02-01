@@ -6,7 +6,36 @@ document.addEventListener('DOMContentLoaded', () => {
     renderCurriculum('all');
     setupEventListeners();
     initScrollAnimations();
+
+    // Start splash progress
+    moveSplashProgress();
 });
+
+function moveSplashProgress() {
+    const splashBar = document.getElementById('splash-progress-bar');
+    let width = 0;
+    const interval = setInterval(() => {
+        if (width >= 100) {
+            clearInterval(interval);
+            setTimeout(dismissSkeletonLoader, 500);
+        } else {
+            width += Math.random() * 5;
+            if (width > 100) width = 100;
+            if (splashBar) splashBar.style.width = width + '%';
+        }
+    }, 50);
+}
+
+function dismissSkeletonLoader() {
+    const loader = document.getElementById('skeleton-loader');
+    if (loader) {
+        loader.style.opacity = '0';
+        loader.style.transition = 'opacity 0.5s ease';
+        setTimeout(() => {
+            loader.style.display = 'none';
+        }, 500);
+    }
+}
 
 // --- Elite Loading Bar ---
 function initLoadingBar() {

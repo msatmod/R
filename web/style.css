@@ -1320,8 +1320,10 @@ body {
     .stat-header {
         justify-content: center;
         text-align: center;
-        /* Ensure text alignment */
         width: 100%;
+        flex-direction: column;
+        /* Stack text and icon */
+        gap: 0.5rem;
     }
 
     .stat-value-container {

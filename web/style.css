@@ -766,12 +766,13 @@ body {
 }
 
 .loader-content {
-    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
+    margin-top: -50px;
+    /* Slight offset to account for footer weight */
 }
 
 .splash-footer {

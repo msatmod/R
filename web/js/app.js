@@ -1,20 +1,25 @@
 document.addEventListener('DOMContentLoaded', () => {
-    initLoadingBar();
-    initTheme();
-    renderStats();
-    renderCertificates();
-    renderCurriculum('all');
-    setupEventListeners();
-    initScrollAnimations();
-    initSecurity();
+    try {
+        initLoadingBar();
+        initTheme();
+        renderStats();
+        renderCertificates();
+        renderCurriculum('all');
+        setupEventListeners();
+        initScrollAnimations();
+        initSecurity();
 
-    // Start animations
-    moveSplashProgress();
-    setTimeout(animateStatsCard, 2000);
+        // Start animations
+        moveSplashProgress();
+        setTimeout(animateStatsCard, 2000);
 
-    // Register PWA Service Worker
-    if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('sw.js').catch(console.error);
+        // Register PWA Service Worker
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('sw.js').catch(console.error);
+        }
+    } catch (error) {
+        console.error("Institutional Hub Initialization Error:", error);
+        dismissSkeletonLoader(); // Emergency reveal
     }
 
     // Fallback: Force dismiss loader if it hangs
@@ -30,18 +35,29 @@ document.addEventListener('DOMContentLoaded', () => {
 function moveSplashProgress() {
     const splashBar = document.getElementById('splash-progress-bar');
     const splashIcon = document.getElementById('splash-r-icon');
+    if (!splashBar || !splashIcon) return;
+
     let width = 0;
-    const interval = setInterval(() => {
+    const animate = () => {
         if (width >= 100) {
-            clearInterval(interval);
+            width = 100;
+            splashBar.style.width = '100%';
+            splashIcon.style.left = '100%';
             setTimeout(dismissSkeletonLoader, 500);
-        } else {
-            width += Math.random() * 5;
-            if (width > 100) width = 100;
-            if (splashBar) splashBar.style.width = width + '%';
-            if (splashIcon) splashIcon.style.left = width + '%';
+            return;
         }
-    }, 50);
+
+        const step = Math.random() * 2 + 0.5; // Smoother, smaller steps
+        width += step;
+        if (width > 100) width = 100;
+
+        splashBar.style.width = width + '%';
+        splashIcon.style.left = width + '%';
+
+        requestAnimationFrame(animate);
+    };
+
+    requestAnimationFrame(animate);
 }
 
 function animateStatsCard() {
@@ -327,4 +343,31 @@ function initScrollAnimations() {
     }, { threshold: 0.1 });
 
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+}
+
+function initSecurity() {
+    // 🛡️ Institutional Integrity: Anti-Right-Click & Anti-Select
+    document.addEventListener('contextmenu', e => e.preventDefault());
+
+    document.addEventListener('keydown', e => {
+        // Disable F12, Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+U, Ctrl+S
+        if (
+            e.key === 'F12' ||
+            (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J' || e.key === 'C')) ||
+            (e.ctrlKey && e.key === 'u') ||
+            (e.ctrlKey && e.key === 's')
+        ) {
+            e.preventDefault();
+            console.warn("🛡️ Access Restricted: Institutional Hub Integrity Active.");
+            return false;
+        }
+    });
+
+    // 🥚 Scholarly Easter Egg
+    console.log(
+        "%c🏛️ R RESEARCH HUB ARCHIVAL ENTRY %c\n\nAuthorized access granted to research personnel.\nProject: 30-Day R Programming Challenge\nAuthors: Amey Thakur & Mega Satish\nStatus: Verified Scholar\nHeritage Year: 2022\n\n%c\"A disciplined journey through statistical truth.\"",
+        "color: #58a6ff; font-size: 24px; font-weight: bold; font-family: 'Play', sans-serif; text-shadow: 0 0 10px rgba(88,166,255,0.5);",
+        "color: #8b949e; font-size: 14px; font-family: 'Play', sans-serif;",
+        "color: #bc8cff; font-style: italic; font-size: 14px;"
+    );
 }

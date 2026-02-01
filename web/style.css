@@ -273,8 +273,8 @@ body {
 
 .cert-card {
     background: var(--panel-bg);
-    border-radius: 20px;
     border: 1px solid var(--border-color);
+    border-radius: 20px;
     overflow: hidden;
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     cursor: zoom-in;
@@ -864,40 +864,114 @@ body {
     .day-grid {
         grid-template-columns: 1fr;
     }
-}/ *   - - -   R e s p o n s i v e   M u l t i - D e v i c e   E v o l u t i o n   - - -   * / 
- 
- @ m e d i a   s c r e e n   a n d   ( m a x - w i d t h :   1 0 2 4 p x )   { 
-         . c o n t a i n e r   {   p a d d i n g :   1 . 5 r e m ;   } 
-         . p r e m i u m - t i t l e   {   f o n t - s i z e :   3 r e m ;   } 
-         . c e r t - g r i d   {   g r i d - t e m p l a t e - c o l u m n s :   1 f r ;   g a p :   1 . 5 r e m ;   } 
-         . d a y - g r i d   {   g r i d - t e m p l a t e - c o l u m n s :   r e p e a t ( a u t o - f i l l ,   m i n m a x ( 2 8 0 p x ,   1 f r ) ) ;   } 
-         . l o a d e r - r - w r a p p e r ,   . l o a d e r - p r o g r e s s - c o n t a i n e r   {   w i d t h :   3 5 0 p x ;   } 
- } 
- 
- @ m e d i a   s c r e e n   a n d   ( m a x - w i d t h :   7 6 8 p x )   { 
-         . p r e m i u m - t i t l e   {   f o n t - s i z e :   2 . 2 r e m ;   } 
-         . t o p - c o n t r o l s   {   t o p :   1 r e m ;   r i g h t :   1 r e m ;   } 
-         . c o n t r o l - b t n   {   w i d t h :   3 8 p x ;   h e i g h t :   3 8 p x ;   f o n t - s i z e :   1 r e m ;   } 
-         . g l a s s - p a n e l   {   p a d d i n g :   1 . 5 r e m ;   } 
-         . s t a t - v a l u e   {   f o n t - s i z e :   2 r e m ;   } 
-         . d a y - g r i d   {   g r i d - t e m p l a t e - c o l u m n s :   1 f r ;   } 
-         . r e p o - l i n k s   {   f l e x - d i r e c t i o n :   c o l u m n ;   } 
-         . a u t h o r s - b a d g e   {   g a p :   1 r e m ;   } 
-         . l o a d e r - r - w r a p p e r ,   . l o a d e r - p r o g r e s s - c o n t a i n e r   {   w i d t h :   2 8 0 p x ;   } 
-         . s e c t i o n - t i t l e   {   f o n t - s i z e :   1 . 8 r e m ;   } 
- } 
- 
- @ m e d i a   s c r e e n   a n d   ( m i n - w i d t h :   1 8 0 0 p x )   { 
-         . c o n t a i n e r   {   m a x - w i d t h :   1 6 0 0 p x ;   } 
-         . p r e m i u m - t i t l e   {   f o n t - s i z e :   5 r e m ;   } 
-         . s u b t i t l e   {   f o n t - s i z e :   1 . 5 r e m ;   m a x - w i d t h :   1 0 0 0 p x ;   } 
-         . s t a t - v a l u e   {   f o n t - s i z e :   4 r e m ;   } 
-         . d a y - c a r d   {   p a d d i n g :   2 . 5 r e m ;   } 
-         . d a y - t i t l e   {   f o n t - s i z e :   1 . 8 r e m ;   } 
- } 
- 
- @ m e d i a   s c r e e n   a n d   ( m a x - w i d t h :   3 6 0 p x )   { 
-         . p r e m i u m - t i t l e   {   f o n t - s i z e :   1 . 8 r e m ;   } 
-         . s t a t - h e a d e r   {   f l e x - d i r e c t i o n :   c o l u m n ;   g a p :   0 . 5 r e m ;   } 
- }  
- 
+}
+
+/* --- Responsive Multi-Device Evolution --- */
+
+@media screen and (max-width: 1024px) {
+    .container {
+        padding: 1.5rem;
+    }
+
+    .premium-title {
+        font-size: 3rem;
+    }
+
+    .cert-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .day-grid {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    }
+
+    .loader-r-wrapper,
+    .loader-progress-container {
+        width: 350px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .premium-title {
+        font-size: 2.2rem;
+    }
+
+    .top-controls {
+        top: 1rem;
+        right: 1rem;
+    }
+
+    .control-btn {
+        width: 38px;
+        height: 38px;
+        font-size: 1rem;
+    }
+
+    .glass-panel {
+        padding: 1.5rem;
+    }
+
+    .stat-value {
+        font-size: 2rem;
+    }
+
+    .day-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .repo-links {
+        flex-direction: column;
+    }
+
+    .authors-badge {
+        gap: 1rem;
+    }
+
+    .loader-r-wrapper,
+    .loader-progress-container {
+        width: 280px;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+}
+
+@media screen and (min-width: 1800px) {
+    .container {
+        max-width: 1600px;
+    }
+
+    .premium-title {
+        font-size: 5rem;
+    }
+
+    .subtitle {
+        font-size: 1.5rem;
+        max-width: 1000px;
+    }
+
+    .stat-value {
+        font-size: 4rem;
+    }
+
+    .day-card {
+        padding: 2.5rem;
+    }
+
+    .day-title {
+        font-size: 1.8rem;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .premium-title {
+        font-size: 1.8rem;
+    }
+
+    .stat-header {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}

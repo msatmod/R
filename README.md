@@ -262,7 +262,7 @@ Special thanks to the **mentors and peers** whose encouragement, discussions, an
 
   <br>
 
-  📊 **[R Programming Challenge](https://github.com/Amey-Thakur/R)**
+  🏆 **[R Programming Challenge](https://github.com/Amey-Thakur/R)**
 
   ---
 

@@ -136,6 +136,14 @@ body {
     min-height: auto;
 }
 
+/* Mobile Hero Adjustment */
+@media (max-width: 768px) {
+    .hero {
+        padding-top: 5rem;
+        /* Clear top controls */
+    }
+}
+
 .breadcrumb {
     font-family: var(--font-heading);
     text-transform: uppercase;
@@ -1244,18 +1252,24 @@ body {
     }
 
     .repo-btn {
-        width: 90%;
+        width: 100%;
+        /* Full width */
+        min-width: 0;
+        /* Override desktop min-width */
         justify-content: center;
         margin: 0 auto;
+        padding: 1rem;
+        /* Easier touch target */
     }
 
     /* Stack Stats Vertical */
     .stats-top-row {
         flex-direction: column;
         align-items: center;
-        gap: 2rem;
+        gap: 2.5rem;
+        /* Increased gap */
         text-align: center;
-        margin-bottom: 2rem;
+        margin-bottom: 2.5rem;
     }
 
     .stat-unit {
@@ -1263,10 +1277,14 @@ body {
         align-items: center;
     }
 
-    .stat-unit.align-right {
-        align-items: center;
-        text-align: center;
-        justify-content: center;
+    /* Improved Identity Spacing */
+    .hero-identity-grid {
+        flex-direction: column;
+        gap: 2.5rem;
+        /* More breathable */
+        width: 100%;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
     }
 
     .stat-header {

@@ -319,6 +319,10 @@ function openNotebook(day, title) {
     modal.style.display = 'block';
     document.body.style.overflow = 'hidden';
 
+    // Clear previous controls
+    const controls = document.getElementById('notebook-controls');
+    if (controls) controls.innerHTML = '';
+
     content.innerHTML = `
         <div class="modal-spinner-wrapper">
             <div class="premium-spinner"></div>
@@ -358,6 +362,7 @@ function openNotebook(day, title) {
             loadConfirmed = true;
             clearTimeout(fallbackTimer);
             console.log(`Successfully loaded local notebook: day${day}.html`);
+            renderNotebookControls(day, dayData);
         };
 
         // Error Handler
@@ -369,6 +374,39 @@ function openNotebook(day, title) {
         };
 
     }, 1200);
+}
+
+function renderNotebookControls(day, dayData) {
+    const controls = document.getElementById('notebook-controls');
+    if (!controls) return;
+
+    const colabLink = dayData ? dayData.colab : '#';
+    const localLink = `notebooks/day${day}.html`;
+
+    controls.innerHTML = `
+        <a href="${localLink}" download="R_Day_${day}.html" class="control-icon-btn download-action" title="Download Local HTML">
+            <i class="fas fa-download"></i>
+        </a>
+        <button class="control-icon-btn" onclick="shareNotebook('${colabLink}')" title="Share Notebook">
+            <i class="fas fa-share-alt"></i>
+        </button>
+    `;
+}
+
+function shareNotebook(url) {
+    if (navigator.share) {
+        navigator.share({
+            title: 'R Programming Challenge Notebook',
+            text: 'Check out this notebook from the R Programming Challenge!',
+            url: url
+        }).catch(err => {
+            console.log('Share failed:', err);
+            // Fallback to clipboard
+            copyToClipboard(url);
+        });
+    } else {
+        copyToClipboard(url);
+    }
 }
 
 function handleNotebookError(iframe, colabUrl) {

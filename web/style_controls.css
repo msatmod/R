@@ -1,0 +1,53 @@
+/* Modal Controls */
+.modal-controls {
+    display: flex;
+    gap: 1rem;
+    margin-left: auto;
+    /* Push to right, but before close button if flex */
+    margin-right: 1.5rem;
+    align-items: center;
+}
+
+.control-icon-btn {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 0.9rem;
+}
+
+.control-icon-btn:hover {
+    background: var(--text-primary);
+    color: var(--bg-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.control-icon-btn.download-action {
+    color: var(--accent-blue);
+    border-color: rgba(88, 166, 255, 0.3);
+}
+
+.control-icon-btn.download-action:hover {
+    background: var(--accent-blue);
+    color: white;
+}
+
+@media (max-width: 480px) {
+    .modal-controls {
+        gap: 0.5rem;
+        margin-right: 0.5rem;
+    }
+
+    .control-icon-btn {
+        width: 32px;
+        height: 32px;
+    }
+}

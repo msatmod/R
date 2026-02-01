@@ -139,8 +139,19 @@ body {
 /* Mobile Hero Adjustment */
 @media (max-width: 768px) {
     .hero {
-        padding-top: 7rem;
+        padding-top: 8.5rem;
         /* Explicit clearance for Top Controls */
+    }
+
+    .top-controls {
+        left: 50%;
+        transform: translateX(-50%);
+        right: auto;
+    }
+
+    .premium-title,
+    .subtitle {
+        text-align: center;
     }
 }
 
@@ -1201,11 +1212,26 @@ body {
 @media screen and (max-width: 768px) {
     .premium-title {
         font-size: 2rem;
+        text-align: center;
+        margin-top: 1rem;
+    }
+
+    .subtitle {
+        text-align: center;
     }
 
     .top-controls {
         top: 1rem;
-        right: 1rem;
+        right: auto;
+        left: 50%;
+        transform: translateX(-50%);
+        width: max-content;
+        z-index: 1000;
+        background: rgba(13, 17, 23, 0.8);
+        /* Slight bg for readability if needed, or transparent */
+        padding: 0.5rem;
+        border-radius: 50px;
+        backdrop-filter: blur(5px);
     }
 
     .control-btn {

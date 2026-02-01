@@ -327,7 +327,7 @@ function openNotebook(day, title) {
         </div>
     `;
 
-    // Premium delay for atmospheric "loading"
+    // Premium delay for atmospheric "loading" & allowing local render
     setTimeout(() => {
         // Find the day data to check for Colab fallback
         const dayData = curriculumData.find(d => d.day === day);
@@ -346,19 +346,22 @@ function openNotebook(day, title) {
 
         // Robust Error Handling for Local Files
         iframe.onload = () => {
-            try {
-                const doc = iframe.contentDocument || iframe.contentWindow.document;
-                if (!doc || doc.body.innerHTML.includes('404') || doc.body.children.length === 0) {
-                    console.warn(`Local notebook day${day}.html might be missing or empty.`);
-                    handleNotebookError(iframe, dayData ? dayData.colab : '');
-                } else {
-                    console.log(`Successfully loaded local notebook: day${day}.html`);
+            // Give the browser a moment to populate the DOM after load event
+            setTimeout(() => {
+                try {
+                    const doc = iframe.contentDocument || iframe.contentWindow.document;
+                    if (!doc || doc.body.innerHTML.includes('404') || doc.body.children.length === 0) {
+                        console.warn(`Local notebook day${day}.html might be missing or empty.`);
+                        handleNotebookError(iframe, dayData ? dayData.colab : '');
+                    } else {
+                        console.log(`Successfully loaded local notebook: day${day}.html`);
+                    }
+                } catch (e) {
+                    // Cross-origin might block access if local, but usually fine for same-origin
+                    // If checking fails, assumes success as user can see it
+                    console.log("Iframe loaded (Cross-origin check avoided).");
                 }
-            } catch (e) {
-                // Cross-origin might block access if local, but usually fine for same-origin
-                // If checking fails, assumes success as user can see it
-                console.log("Iframe loaded (Cross-origin check avoided).");
-            }
+            }, 500); // Small buffer after load
         };
 
         iframe.onerror = () => {
@@ -366,7 +369,7 @@ function openNotebook(day, title) {
             handleNotebookError(iframe, dayData ? dayData.colab : '');
         };
 
-    }, 1200);
+    }, 2500); // Extended delay for smoother experience
 }
 
 function handleNotebookError(iframe, colabUrl) {

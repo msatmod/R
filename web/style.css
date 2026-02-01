@@ -235,16 +235,17 @@ body {
 
 /* Stats Section Re-refinement */
 .stats-container {
-    padding: 2rem 0;
-    margin-bottom: 6rem;
-    /* Increased spacing to separate from achievements title */
+    padding: 1rem 0;
+    margin-bottom: 3rem;
+    /* Reduced from 6rem */
 }
 
 .stats-progress-card {
     background: var(--panel-bg);
     border: 1px solid var(--border-color);
     border-radius: 20px;
-    padding: 2.5rem;
+    padding: 1.5rem 2.5rem;
+    /* Reduced vertical padding */
     position: relative;
     overflow: hidden;
     cursor: pointer;

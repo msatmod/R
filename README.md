@@ -24,7 +24,7 @@
 
 - [x] **[Day 5](https://www.r-project.org/about.html)** - Introduction
 - [x] **[Day 6](https://www.w3schools.com/r/r_intro.asp)** - What is R Programming
-- [x] **[Day 7](https://www.kaggle.com/code/megasatish/variables-and-datatype-in-r)** - Variables and Datatypes in R
+- [x] **[Day 7](https://www.kaggle.com/code/megasatish/variables-and-datatype-in-r)** - Variables and Data Types in R
 - [x] **[Day 8](https://www.kaggle.com/code/megasatish/variables-and-datatype-in-r)** - Logical Operators
 - [x] **[Day 9](https://www.kaggle.com/code/megasatish/vectors-lists-matrix-in-r)** - Vectors
 - [x] **[Day 10](https://www.kaggle.com/code/megasatish/vectors-lists-matrix-in-r)** - Lists
@@ -71,5 +71,5 @@
 
 <p align="center"> <b> 👉🏻 Created to Learn R 👈🏻 <b> </p>
  
-<p align="center"><a href='https://github.com/Amey-Thakur/COMPUTER-ENGINEERING', style='color: greenyellow;'> ✌🏻 Back To Engineering ✌🏻</p>
+<p align="center"><a href='https://github.com/Amey-Thakur/COMPUTER-ENGINEERING' style='color: greenyellow;'> ✌🏻 Back To Engineering ✌🏻</p>
 

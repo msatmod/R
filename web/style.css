@@ -9,6 +9,19 @@
     --gradient: linear-gradient(135deg, #58a6ff, #bc8cff);
     --font-heading: 'Outfit', sans-serif;
     --font-body: 'Inter', sans-serif;
+    --shadow-premium: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+[data-theme="light"] {
+    --bg-color: #f6f8fa;
+    --panel-bg: rgba(255, 255, 255, 0.8);
+    --border-color: rgba(31, 35, 40, 0.1);
+    --text-primary: #1f2328;
+    --text-secondary: #636c76;
+    --accent-blue: #0969da;
+    --accent-purple: #8250df;
+    --gradient: linear-gradient(135deg, #0969da, #8250df);
+    --shadow-premium: 0 8px 32px 0 rgba(140, 149, 159, 0.2);
 }
 
 * {
@@ -23,6 +36,7 @@ body {
     font-family: var(--font-body);
     line-height: 1.6;
     overflow-x: hidden;
+    transition: background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1), color 0.4s ease;
 }
 
 .dark-theme {
@@ -35,7 +49,38 @@ body {
     padding: 2rem;
 }
 
-/* Glassmorphism Panel */
+/* UI Controls */
+.top-controls {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    display: flex;
+    gap: 1rem;
+    z-index: 100;
+}
+
+.control-btn {
+    background: var(--panel-bg);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    font-size: 1.2rem;
+}
+
+.control-btn:hover {
+    transform: translateY(-3px) scale(1.05);
+    border-color: var(--accent-blue);
+    box-shadow: 0 4px 12px rgba(88, 166, 255, 0.2);
+}
+
+/* Glassmorphism Panel & Animations */
 .glass-panel {
     background: var(--panel-bg);
     backdrop-filter: blur(12px);
@@ -43,13 +88,25 @@ body {
     border: 1px solid var(--border-color);
     border-radius: 24px;
     padding: 3rem;
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    box-shadow: var(--shadow-premium);
+    position: relative;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: slideUpFade 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes slideUpFade {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Hero Section */
 .hero {
-    padding: 4rem 2rem;
+    padding: 6rem 2rem 4rem;
     text-align: center;
+    position: relative;
 }
 
 .breadcrumb {
@@ -59,18 +116,23 @@ body {
     font-size: 0.8rem;
     color: var(--text-secondary);
     margin-bottom: 1.5rem;
+    opacity: 0;
+    animation: fadeIn 1s ease 0.4s forwards;
 }
 
-.breadcrumb .separator {
-    margin: 0 0.5rem;
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
 }
 
 .premium-title {
     font-family: var(--font-heading);
-    font-size: 4rem;
+    font-size: 4.5rem;
     font-weight: 700;
     margin-bottom: 1rem;
-    letter-spacing: -1px;
+    letter-spacing: -2px;
+    line-height: 1;
 }
 
 .gradient-text {
@@ -81,38 +143,68 @@ body {
 }
 
 .subtitle {
-    font-size: 1.25rem;
+    font-size: 1.35rem;
     color: var(--text-secondary);
-    max-width: 700px;
-    margin: 0 auto 2.5rem;
+    max-width: 750px;
+    margin: 0 auto 3rem;
+    font-weight: 300;
 }
 
 .authors-badge {
     display: flex;
     justify-content: center;
-    gap: 2rem;
+    gap: 2.5rem;
+    margin-top: 1rem;
 }
 
 .author {
     display: flex;
     align-items: center;
-    gap: 0.75rem;
+    gap: 1rem;
     background: rgba(255, 255, 255, 0.05);
-    padding: 0.5rem 1.25rem;
+    padding: 0.75rem 1.5rem;
     border-radius: 50px;
     border: 1px solid var(--border-color);
+    text-decoration: none;
+    color: var(--text-primary);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.author:hover {
+    transform: translateY(-5px) scale(1.05);
+    background: var(--panel-bg);
+    border-color: var(--accent-blue);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .author img {
-    width: 32px;
-    height: 32px;
+    width: 48px;
+    height: 48px;
     border-radius: 50%;
-    border: 2px solid var(--accent-blue);
+    border: 3px solid var(--accent-blue);
+    transition: transform 0.4s ease;
+}
+
+.author:hover img {
+    transform: rotate(10deg);
 }
 
 .author span {
-    font-weight: 600;
-    font-size: 0.9rem;
+    font-weight: 700;
+    font-size: 1rem;
+    font-family: var(--font-heading);
+}
+
+/* Scroll Animation classes */
+.reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* Section Styling */
@@ -175,11 +267,11 @@ body {
     transition: width 1s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Certificate Grid */
+/* Certificate Grid & Viewer */
 .cert-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
     margin-bottom: 5rem;
 }
 
@@ -188,34 +280,108 @@ body {
     border-radius: 20px;
     border: 1px solid var(--border-color);
     overflow: hidden;
-    transition: all 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: zoom-in;
+}
+
+.cert-card:hover {
+    transform: scale(1.03) translateY(-10px);
+    border-color: var(--accent-purple);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.cert-image-wrapper {
+    position: relative;
+    height: 220px;
+    overflow: hidden;
 }
 
 .cert-card img {
     width: 100%;
-    height: 200px;
+    height: 100%;
     object-fit: cover;
-    border-bottom: 1px solid var(--border-color);
+    transition: transform 0.5s ease;
+}
+
+.cert-card:hover img {
+    transform: scale(1.1);
 }
 
 .cert-info {
     padding: 1.5rem;
 }
 
-.cert-info h3 {
-    font-family: var(--font-heading);
-    font-size: 1.1rem;
+.cert-author-badge {
+    display: inline-block;
+    padding: 0.2rem 0.8rem;
+    background: rgba(88, 166, 255, 0.1);
+    color: var(--accent-blue);
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 700;
     margin-bottom: 0.5rem;
 }
 
-.cert-info p {
-    color: var(--text-secondary);
-    font-size: 0.9rem;
+.viewer-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border-color);
 }
 
-.cert-card:hover {
-    transform: scale(1.02);
-    border-color: var(--accent-purple);
+.view-btn {
+    flex: 1;
+    padding: 0.8rem;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: 1px solid var(--border-color);
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text-primary);
+}
+
+.view-btn:hover {
+    background: var(--text-primary);
+    color: var(--bg-color);
+}
+
+.download-btn {
+    background: var(--accent-blue);
+    color: white;
+    border: none;
+}
+
+.download-btn:hover {
+    filter: brightness(1.1);
+}
+
+#cert-viewer-modal .modal-content {
+    background: transparent;
+    border: none;
+    height: auto;
+    max-height: 95vh;
+}
+
+#cert-viewer-modal .full-cert-image {
+    width: 100%;
+    max-height: 70vh;
+    object-fit: contain;
+    border-radius: 12px;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.8);
+}
+
+.viewer-footer-controls {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
 }
 
 /* Filter Bar */
@@ -478,6 +644,48 @@ body {
 
 ::-webkit-scrollbar-thumb:hover {
     background: var(--text-secondary);
+}
+
+/* Repo Links */
+.repo-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    opacity: 0;
+    animation: fadeIn 1s ease 0.6s forwards;
+}
+
+.repo-btn {
+    padding: 0.8rem 1.5rem;
+    border-radius: 12px;
+    font-weight: 700;
+    text-decoration: none;
+    font-family: var(--font-heading);
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.amey-repo {
+    background: rgba(88, 166, 255, 0.1);
+    color: var(--accent-blue);
+    border: 1px solid rgba(88, 166, 255, 0.2);
+}
+
+.mega-repo {
+    background: rgba(188, 140, 255, 0.1);
+    color: var(--accent-purple);
+    border: 1px solid rgba(188, 140, 255, 0.2);
+}
+
+.repo-btn:hover {
+    transform: translateY(-3px) scale(1.05);
+    background: var(--text-primary);
+    color: var(--bg-color);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 /* Responsive */

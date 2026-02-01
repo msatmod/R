@@ -245,20 +245,44 @@ const curriculumData = [
     }
 ];
 
+const authorData = {
+    amey: {
+        name: "Amey Thakur",
+        github: "https://github.com/Amey-Thakur",
+        repo: "https://github.com/Amey-Thakur/R",
+        avatar: "https://github.com/Amey-Thakur.png"
+    },
+    mega: {
+        name: "Mega Satish",
+        github: "https://github.com/msatmod",
+        repo: "https://github.com/msatmod/R",
+        avatar: "Mega/Mega.png"
+    }
+};
+
 const certificateData = [
     {
         name: "R Programming for Beginners",
         issuer: "Simplilearn (SkillUP)",
+        recipient: "Amey Thakur",
         image: "Certificates/Amey Thakur - R Programming for Beginners - Skillup by Simplilearn.png"
     },
     {
         name: "Data Science with R",
         issuer: "Simplilearn (SkillUP)",
+        recipient: "Amey Thakur",
         image: "Certificates/Amey Thakur - Data Science with R programming - Skillup by Simplilearn.png"
     },
     {
-        name: "Mega's R Programming",
+        name: "R Programming for Beginners",
         issuer: "Simplilearn (SkillUP)",
+        recipient: "Mega Satish",
         image: "Certificates/Mega Satish - R Programming for Beginners - Skillup by Simplilearn.png"
+    },
+    {
+        name: "Data Science with R",
+        issuer: "Simplilearn (SkillUP)",
+        recipient: "Mega Satish",
+        image: "Certificates/Mega Satish - Data Science with R programming - Skillup by Simplilearn.png"
     }
 ];

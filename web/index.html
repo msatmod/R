@@ -17,6 +17,14 @@
     <div id="app">
         <header class="hero">
             <div class="glass-panel">
+                <div class="top-controls">
+                    <button id="theme-toggle" class="control-btn" aria-label="Toggle Theme">
+                        <span class="icon">🌓</span>
+                    </button>
+                    <button id="share-btn" class="control-btn" aria-label="Share Challenge">
+                        <span class="icon">🔗</span>
+                    </button>
+                </div>
                 <nav class="breadcrumb">
                     <span class="root">R Programming Challenge</span>
                     <span class="separator">/</span>
@@ -25,15 +33,23 @@
                 <h1 class="premium-title">R Programming <span class="gradient-text">Challenge</span></h1>
                 <p class="subtitle">A disciplined 30-day journey through the R ecosystem, statistical analysis, and data
                     science.</p>
+                <div class="repo-links">
+                    <a href="https://github.com/Amey-Thakur/R" target="_blank" class="repo-btn amey-repo">
+                        <span>📁</span> Amey's R Repo
+                    </a>
+                    <a href="https://github.com/msatmod/R" target="_blank" class="repo-btn mega-repo">
+                        <span>📁</span> Mega's R Repo
+                    </a>
+                </div>
                 <div class="authors-badge">
-                    <div class="author">
+                    <a href="https://github.com/Amey-Thakur" target="_blank" class="author">
                         <img src="https://github.com/Amey-Thakur.png" alt="Amey Thakur">
                         <span>Amey Thakur</span>
-                    </div>
-                    <div class="author">
-                        <img src="https://msatmod.github.io/R/Mega/Mega.png" alt="Mega Satish">
+                    </a>
+                    <a href="https://github.com/msatmod" target="_blank" class="author">
+                        <img src="Mega/Mega.png" alt="Mega Satish">
                         <span>Mega Satish</span>
-                    </div>
+                    </a>
                 </div>
             </div>
         </header>
@@ -71,6 +87,27 @@
                 <a href="#readme-top">Back to README</a>
             </div>
         </footer>
+    </div>
+
+    <!-- Certificate Viewer Modal -->
+    <div id="cert-viewer-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="cert-modal-title">Certificate</h3>
+                <button class="close-modal" onclick="closeCertModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <img id="full-cert-image" class="full-cert-image" src="" alt="Certificate">
+                <div class="viewer-footer-controls">
+                    <button class="view-btn share-cert-btn" onclick="shareCertificate()">
+                        <span>🔗</span> Share
+                    </button>
+                    <a id="download-cert-link" href="" download class="view-btn download-btn">
+                        <span>📥</span> Download (PNG)
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- Notebook Viewer Modal -->

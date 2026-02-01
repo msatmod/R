@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+    initLoadingBar();
     initTheme();
     renderStats();
     renderCertificates();
@@ -6,6 +7,28 @@ document.addEventListener('DOMContentLoaded', () => {
     setupEventListeners();
     initScrollAnimations();
 });
+
+// --- Elite Loading Bar ---
+function initLoadingBar() {
+    const bar = document.getElementById('loading-bar');
+    let width = 0;
+
+    // Simulate premium Apple-style loading
+    const interval = setInterval(() => {
+        if (width >= 100) {
+            clearInterval(interval);
+            setTimeout(() => {
+                bar.style.opacity = '0';
+                setTimeout(() => bar.style.display = 'none', 500);
+            }, 500);
+        } else {
+            // Speed up at the end for "snap" effect
+            const increment = width > 80 ? 5 : 2;
+            width += increment;
+            bar.style.width = width + '%';
+        }
+    }, 40);
+}
 
 // --- Theme System ---
 function initTheme() {

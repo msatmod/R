@@ -39,16 +39,24 @@ jobs:
         run: |
           find . -name "*.ipynb" -not -path "./web/*" -exec jupyter nbconvert --to html --template full --output-dir=./web/notebooks {} +
           
+      - name: List Converted Files
+        run: ls -R web/notebooks
+
       - name: Standardize Filenames
         run: |
           cd web/notebooks
+          # Use nullglob to avoid loop running if no .html files exist
+          shopt -s nullglob
           for f in *.html; do
+            echo "Processing $f..."
             # Extract number from filename (e.g., "Day 1 - ..." -> "01")
-            num=$(echo "$f" | grep -oEi 'Day [0-9]+' | grep -oEi '[0-9]+')
+            num=$(echo "$f" | grep -oEi 'Day [0-9]+' | grep -oEi '[0-9]+' || echo "")
             if [ ! -z "$num" ]; then
-              # Pad with leading zero if needed
               formatted_num=$(printf "%02d" $num)
+              echo "Standardizing $f to day${formatted_num}.html"
               mv "$f" "day${formatted_num}.html"
+            else
+              echo "Skipping $f (No Day number found)"
             fi
           done
 

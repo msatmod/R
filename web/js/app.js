@@ -363,11 +363,11 @@ function initSecurity() {
         }
     });
 
-    // 🥚 Scholarly Easter Egg
+    // 🥚 Personalized Easter Egg: The Truth in Code
     console.log(
-        "%c🏛️ R RESEARCH HUB ARCHIVAL ENTRY %c\n\nAuthorized access granted to research personnel.\nProject: 30-Day R Programming Challenge\nAuthors: Amey Thakur & Mega Satish\nStatus: Verified Scholar\nHeritage Year: 2022\n\n%c\"A disciplined journey through statistical truth.\"",
-        "color: #58a6ff; font-size: 24px; font-weight: bold; font-family: 'Play', sans-serif; text-shadow: 0 0 10px rgba(88,166,255,0.5);",
-        "color: #8b949e; font-size: 14px; font-family: 'Play', sans-serif;",
+        "%c📊 R 30-DAY CHALLENGE ARCHIVE %c\n\nAuthorship: Amey Thakur & Mega Satish\nProject: Statistical Research Hub\n\n%c\"A disciplined journey through code and statistical truth.\"",
+        "color: #58a6ff; font-size: 24px; font-weight: bold; font-family: 'Play', sans-serif; text-shadow: 2px 2px 0px rgba(0,0,0,0.2);",
+        "color: #f0f6fc; font-size: 16px; font-family: 'Play', sans-serif; font-weight: 500;",
         "color: #bc8cff; font-style: italic; font-size: 14px;"
     );
 }

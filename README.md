@@ -255,6 +255,8 @@ Copyright © 2022 Amey Thakur & Mega Satish
 
 **Created & Maintained by**: [Amey Thakur](https://github.com/Amey-Thakur) & [Mega Satish](https://github.com/msatmod)
 
+**Collaborator's Repository**: [R Programming Challenge - Mega Satish](https://github.com/msatmod/R)
+
 This project features **R Programming Challenge**, a comprehensive study conducted to master the R language. It represents a personal exploration into **Data Science**, **Statistical Analysis**, and **Automated Data Collection**.
 
 **Connect:** [GitHub](https://github.com/Amey-Thakur) &nbsp;·&nbsp; [LinkedIn](https://www.linkedin.com/in/amey-thakur) &nbsp;·&nbsp; [ORCID](https://orcid.org/0000-0001-5644-1575)

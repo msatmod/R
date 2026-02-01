@@ -139,8 +139,8 @@ body {
 /* Mobile Hero Adjustment */
 @media (max-width: 768px) {
     .hero {
-        padding-top: 6rem;
-        /* Cleaner clearance for controls */
+        padding-top: 7rem;
+        /* Explicit clearance for Top Controls */
     }
 }
 
@@ -1252,14 +1252,11 @@ body {
     }
 
     .repo-btn {
-        width: 100%;
-        /* Full width */
-        min-width: 0;
-        /* Override desktop min-width */
+        width: auto;
+        min-width: 220px;
         justify-content: center;
         margin: 0 auto;
-        padding: 1rem;
-        /* Easier touch target */
+        padding: 0.8rem 2rem;
     }
 
     /* Stack Stats Vertical */
@@ -1312,10 +1309,10 @@ body {
     /* Fix Overflowing Icons */
     .stats-r-icon {
         left: 50% !important;
-        /* Force center on mobile */
         transform: translate(-50%, -50%) !important;
         bottom: -20px;
-        /* Adjust position */
+        max-width: 100%;
+        /* Prevent overflow */
     }
 }
 
@@ -1372,8 +1369,9 @@ body {
     background: transparent !important;
     border: none !important;
     color: var(--text-secondary);
-    width: 36px;
-    height: 36px;
+    width: 44px;
+    /* Touch target optimized */
+    height: 44px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1398,4 +1396,9 @@ body {
 
 .control-icon-btn.download-action:hover {
     color: var(--accent-blue);
+}
+
+/* Fix for mobile animation overflow */
+.stats-animation-track {
+    overflow: hidden;
 }

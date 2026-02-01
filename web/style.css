@@ -178,12 +178,12 @@ body {
 }
 
 .author-pill img {
-    width: 48px;
-    height: 48px;
+    width: 44px;
+    /* Slightly smaller for the new layout unit */
+    height: 44px;
     border-radius: 50%;
-    border: 3px solid var(--accent-blue);
-    box-shadow: 0 0 15px rgba(88, 166, 255, 0.3);
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 2px solid var(--accent-blue);
+    box-shadow: 0 0 10px rgba(88, 166, 255, 0.3);
 }
 
 .author-pill:hover img {
@@ -236,7 +236,8 @@ body {
 /* Stats Section Re-refinement */
 .stats-container {
     padding: 2rem 0;
-    margin-bottom: 3rem;
+    margin-bottom: 6rem;
+    /* Increased spacing to separate from achievements title */
 }
 
 .stats-progress-card {
@@ -289,6 +290,49 @@ body {
     font-size: 1.5rem;
     color: var(--text-secondary);
     font-weight: 500;
+}
+
+.stats-animation-track {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    margin: 2rem 0;
+    display: flex;
+    align-items: center;
+}
+
+.stats-subtle-line {
+    width: 100%;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.05);
+    /* Very subtle line */
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 10px;
+}
+
+.stats-r-icon {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-50%, -50%);
+    background: var(--accent-blue);
+    color: var(--bg-color);
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 20px rgba(88, 166, 255, 0.6);
+    z-index: 10;
+    transition: left 0.1s linear;
+}
+
+.stats-r-icon svg {
+    width: 22px !important;
+    height: 22px !important;
 }
 
 .progress-wrapper {
@@ -739,7 +783,10 @@ body {
 .loader-r-wrapper {
     width: 400px;
     position: relative;
-    margin-bottom: 20px;
+    margin: 0 auto 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .loader-r-icon {
@@ -799,13 +846,31 @@ body {
 }
 
 .loader-text {
-    color: var(--text-secondary);
+    color: var(--text-primary);
     font-family: var(--font-body);
-    font-size: 0.75rem;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    opacity: 0.8;
+    font-size: 1.25rem;
+    /* Even larger for readability */
+    letter-spacing: 1px;
+    opacity: 0.95;
     text-align: center;
+    margin-top: 1.5rem;
+    font-weight: 600;
+}
+
+.pulse-text {
+    animation: pulseSync 2s ease-in-out infinite;
+}
+
+@keyframes pulseSync {
+
+    0%,
+    100% {
+        opacity: 0.6;
+    }
+
+    50% {
+        opacity: 1;
+    }
 }
 
 @keyframes fadeOutLoader {
@@ -862,13 +927,11 @@ body {
 }
 
 /* Repo Links & Icons */
-.repo-links {
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-    margin-bottom: 2rem;
-    opacity: 0;
-    animation: fadeIn 1s ease 0.6s forwards;
+/* Repo Links Cleanup */
+.repo-btn {
+    width: 100%;
+    /* Ensure full width within profile-unit */
+    min-width: 220px;
 }
 
 .repo-btn {
@@ -897,20 +960,46 @@ body {
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
 }
 
-.repo-icon {
+.repo-btn i {
     font-size: 1.1rem;
     color: #ffffff !important;
-    display: inline-block !important;
-    /* Force visibility */
 }
 
 /* Vertical Author Layout */
-.authors-badge {
+/* Hero Identity Grid Re-anchoring */
+.hero-identity-grid {
     display: flex;
     justify-content: center;
-    align-items: flex-end;
-    gap: 3rem;
-    margin-top: 1rem;
+    gap: 4rem;
+    margin-top: 2rem;
+    opacity: 0;
+    animation: fadeIn 1s ease 0.6s forwards;
+}
+
+.profile-unit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.author-pill {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: var(--panel-bg);
+    padding: 0.6rem 1.5rem 0.6rem 0.6rem;
+    border-radius: 100px;
+    border: 1px solid var(--border-color);
+    text-decoration: none;
+    color: var(--text-primary);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.author-pill:hover {
+    transform: translateY(-5px) scale(1.05);
+    border-color: var(--accent-blue);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .author {

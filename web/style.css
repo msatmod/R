@@ -257,8 +257,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    /* Align counters at the bottom of the row */
-    margin-bottom: 2rem;
+    margin-bottom: 0.5rem;
 }
 
 .stat-unit {
@@ -276,53 +275,6 @@ body {
     align-items: center;
     gap: 0.5rem;
     margin-bottom: 0.5rem;
-}
-
-.stat-header.justify-end {
-    justify-content: flex-end;
-}
-
-.stat-cert-icon {
-    color: var(--accent-blue);
-    font-size: 1.2rem;
-}
-
-.stat-center-unit {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    margin-top: 1.5rem;
-}
-
-.stat-footer-value {
-    font-family: var(--font-heading);
-    font-size: 2.5rem;
-    font-weight: 700;
-}
-
-.stat-footer-label {
-    font-size: 0.75rem;
-    color: var(--text-secondary);
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-
-.stats-top-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 0.5rem;
-}
-
-.stat-unit {
-    display: flex;
-    flex-direction: column;
-}
-
-.stat-unit.align-right {
-    align-items: flex-end;
-    text-align: right;
 }
 
 .stat-header.justify-end {
@@ -342,11 +294,30 @@ body {
     margin-top: 1rem;
 }
 
+.stat-footer-value {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.stat-footer-label {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Cleaned up duplicated blocks */
+
+/* Cleaned up duplicated blocks */
+
+/* Cleaned up duplicated blocks */
+
 .stat-header {
     display: flex;
     align-items: center;
     gap: 0.75rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.75rem;
 }
 
 .stat-check-icon {
@@ -366,7 +337,7 @@ body {
     display: flex;
     align-items: baseline;
     gap: 0.5rem;
-    margin-bottom: 2rem;
+    margin-bottom: 0.5rem;
 }
 
 .stat-value {
@@ -387,7 +358,7 @@ body {
     position: relative;
     width: 100%;
     height: 40px;
-    margin: 2rem 0;
+    margin: 0.5rem 0;
     display: flex;
     align-items: center;
 }

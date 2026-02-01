@@ -338,23 +338,34 @@ function openNotebook(day, title) {
                     src="notebooks/day${day}.html" 
                     frameborder="0" 
                     style="width:100%; height:100%; min-height:650px;"
-                    onerror="handleNotebookError(this, '${dayData ? dayData.colab : ''}')"
                 ></iframe>
             </div>
         `;
 
-        // Final sanity check for "None" or 404
         const iframe = content.querySelector('iframe');
+
+        // Robust Error Handling for Local Files
         iframe.onload = () => {
             try {
-                if (!iframe.contentDocument || iframe.contentDocument.body.innerHTML.includes('404')) {
+                const doc = iframe.contentDocument || iframe.contentWindow.document;
+                if (!doc || doc.body.innerHTML.includes('404') || doc.body.children.length === 0) {
+                    console.warn(`Local notebook day${day}.html might be missing or empty.`);
                     handleNotebookError(iframe, dayData ? dayData.colab : '');
+                } else {
+                    console.log(`Successfully loaded local notebook: day${day}.html`);
                 }
             } catch (e) {
-                // Cross-origin issues might prevent checking content, fallback to timeout check
-                console.log("Iframe loaded, confirming path stability.");
+                // Cross-origin might block access if local, but usually fine for same-origin
+                // If checking fails, assumes success as user can see it
+                console.log("Iframe loaded (Cross-origin check avoided).");
             }
         };
+
+        iframe.onerror = () => {
+            console.error("Failed to load local notebook.");
+            handleNotebookError(iframe, dayData ? dayData.colab : '');
+        };
+
     }, 1200);
 }
 

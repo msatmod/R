@@ -381,7 +381,7 @@ function renderNotebookControls(day, dayData) {
     if (!controls) return;
 
     const colabLink = dayData ? dayData.colab : '#';
-    let downloadLink = '#';
+    let downloadLink = null;
 
     // Construct Raw GitHub Link for IDL/Python Download
     if (colabLink && colabLink.includes('colab.research.google.com/github')) {
@@ -389,14 +389,46 @@ function renderNotebookControls(day, dayData) {
         downloadLink = `https://raw.githubusercontent.com/${rawPath.replace('/blob/', '/')}`;
     }
 
+    const downloadAction = downloadLink
+        ? `onclick="downloadNotebook('${downloadLink}', 'Day_${day}_Notebook.ipynb')"`
+        : `onclick="alert('Notebook source not available for download.')"`;
+
     controls.innerHTML = `
-        <a href="${downloadLink}" download="Day_${day}_Notebook.ipynb" class="control-icon-btn download-action" title="Download Python Notebook (.ipynb)">
+        <button class="control-icon-btn download-action" ${downloadAction} title="Download Python Notebook (.ipynb)">
             <i class="fas fa-download"></i>
-        </a>
+        </button>
         <button class="control-icon-btn" onclick="shareNotebook('${colabLink}')" title="Share Notebook">
             <i class="fas fa-share-alt"></i>
         </button>
     `;
+}
+
+function downloadNotebook(url, filename) {
+    if (!url) return;
+
+    const btn = document.querySelector('.download-action');
+    if (btn) btn.style.opacity = '0.5'; // Visual feedback
+
+    fetch(url)
+        .then(response => response.blob())
+        .then(blob => {
+            const blobUrl = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.style.display = 'none';
+            a.href = blobUrl;
+            a.download = filename;
+            document.body.appendChild(a);
+            a.click();
+            window.URL.revokeObjectURL(blobUrl);
+            document.body.removeChild(a);
+            if (btn) btn.style.opacity = '1';
+        })
+        .catch(err => {
+            console.error('Download failed:', err);
+            alert('Failed to download notebook. Opening raw file instead.');
+            window.open(url, '_blank');
+            if (btn) btn.style.opacity = '1';
+        });
 }
 
 function shareNotebook(url) {

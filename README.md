@@ -18,7 +18,7 @@
 
 <div align="center">
 
-  [Authors](#authors) &nbsp;·&nbsp; [Overview](#overview) &nbsp;·&nbsp; [Curriculum](#features) &nbsp;·&nbsp; [Structure](#project-structure) &nbsp;·&nbsp; [Certifications](#results) &nbsp;·&nbsp; [Quick Start](#quick-start) &nbsp;·&nbsp; [Usage Guidelines](#usage-guidelines) &nbsp;·&nbsp; [License](#license) &nbsp;·&nbsp; [About](#about-this-repository) &nbsp;·&nbsp; [Acknowledgments](#acknowledgments)
+  [Authors](#authors) &nbsp;·&nbsp; [Overview](#overview) &nbsp;·&nbsp; [Activity](#activity) &nbsp;·&nbsp; [Curriculum](#features) &nbsp;·&nbsp; [Structure](#project-structure) &nbsp;·&nbsp; [Certifications](#results) &nbsp;·&nbsp; [Quick Start](#quick-start) &nbsp;·&nbsp; [Usage Guidelines](#usage-guidelines) &nbsp;·&nbsp; [License](#license) &nbsp;·&nbsp; [About](#about-this-repository) &nbsp;·&nbsp; [Acknowledgments](#acknowledgments)
 
 </div>
 
@@ -62,6 +62,7 @@ The curriculum is governed by strict **computational data science principles**:
 
 ---
 
+<a name="activity"></a>
 ## Activity & Commitment
 
 <div align="center">
@@ -98,46 +99,46 @@ The curriculum is governed by strict **computational data science principles**:
 ## Curriculum
 
 ### Getting Started with R Programming
-- [x] **[Day 1](https://www.kaggle.com/code/ameythakur20/day-1-getting-started-in-r)** - Getting Started in R
-- [x] **[Day 2](https://www.kaggle.com/code/ameythakur20/day-2-load-data-into-r/notebook)** - Load Data in R
-- [x] **[Day 3](https://www.kaggle.com/ameythakur20/day-3-summarize-data)** - Summarize Data
-- [x] **[Day 4](https://www.kaggle.com/ameythakur20/day-4-graphing-data)** - Graphing Data
+- [x] **Day 1** - Getting Started in R ([Kaggle](https://www.kaggle.com/code/ameythakur20/day-1-getting-started-in-r) | [Colab](https://colab.research.google.com/github/Amey-Thakur/R/blob/main/Getting%20Started%20with%20R%20Programming/Day%201%20-%20Getting%20Started%20In%20R.ipynb))
+- [x] **Day 2** - Load Data in R ([Kaggle](https://www.kaggle.com/code/ameythakur20/day-2-load-data-into-r/notebook) | [Colab](https://colab.research.google.com/github/Amey-Thakur/R/blob/main/Getting%20Started%20with%20R%20Programming/Day%202%20-%20Load%20Data%20Into%20R.ipynb))
+- [x] **Day 3** - Summarize Data ([Kaggle](https://www.kaggle.com/ameythakur20/day-3-summarize-data) | [Colab](https://colab.research.google.com/github/Amey-Thakur/R/blob/main/Getting%20Started%20with%20R%20Programming/Day%203%20-%20Summarize%20Data.ipynb))
+- [x] **Day 4** - Graphing Data ([Kaggle](https://www.kaggle.com/ameythakur20/day-4-graphing-data) | [Colab](https://colab.research.google.com/github/Amey-Thakur/R/blob/main/Getting%20Started%20with%20R%20Programming/Day%204%20-%20Graphing%20Data.ipynb))
 
 ### R Programming for Beginners
-- [x] **[Day 5](https://www.r-project.org/about.html)** - Introduction
-- [x] **[Day 6](https://www.w3schools.com/r/r_intro.asp)** - What is R Programming
-- [x] **[Day 7](https://www.kaggle.com/code/megasatish/variables-and-datatype-in-r)** - Variables and Data Types in R
-- [x] **[Day 8](https://www.kaggle.com/code/megasatish/variables-and-datatype-in-r)** - Logical Operators
-- [x] **[Day 9](https://www.kaggle.com/code/megasatish/vectors-lists-matrix-in-r)** - Vectors
-- [x] **[Day 10](https://www.kaggle.com/code/megasatish/vectors-lists-matrix-in-r)** - Lists
-- [x] **[Day 11](https://www.kaggle.com/code/megasatish/vectors-lists-matrix-in-r)** - Matrix
-- [x] **[Day 12](https://www.kaggle.com/code/megasatish/dataframes-data-visualization)** - DataFrame
-- [x] **[Day 13](https://www.kaggle.com/code/megasatish/functions-in-r)** - Functions in R
-- [x] **[Day 14](https://www.kaggle.com/code/megasatish/data-manipulation-in-r)** - Data Manipulation
-- [x] **[Day 15](https://www.kaggle.com/code/megasatish/data-visualization)** - Data Visualization
-- [x] **[Day 16](https://www.kaggle.com/code/megasatish/time-series-analysis-in-r)** - Time Series Analysis in R
+- [x] **Day 5** - Introduction ([Source](https://www.r-project.org/about.html))
+- [x] **Day 6** - What is R Programming ([Source](https://www.w3schools.com/r/r_intro.asp))
+- [x] **Day 7** - Variables and Data Types in R ([Kaggle](https://www.kaggle.com/code/megasatish/variables-and-datatype-in-r) | [Colab](https://colab.research.google.com/github/Amey-Thakur/R/blob/main/R%20Programming%20for%20Beginners%20-%20SkillUP%20by%20Simplilearn/Variables%20and%20DataType%20in%20R.ipynb))
+- [x] **Day 8** - Logical Operators ([Kaggle](https://www.kaggle.com/code/megasatish/variables-and-datatype-in-r) | [Colab](https://colab.research.google.com/github/Amey-Thakur/R/blob/main/R%20Programming%20for%20Beginners%20-%20SkillUP%20by%20Simplilearn/Variables%20and%20DataType%20in%20R.ipynb))
+- [x] **Day 9** - Vectors ([Kaggle](https://www.kaggle.com/code/megasatish/vectors-lists-matrix-in-r) | [Colab](https://colab.research.google.com/github/Amey-Thakur/R/blob/main/R%20Programming%20for%20Beginners%20-%20SkillUP%20by%20Simplilearn/Vectors%2C%20Lists%2C%20Matrix%20in%20R.ipynb))
+- [x] **Day 10** - Lists ([Kaggle](https://www.kaggle.com/code/megasatish/vectors-lists-matrix-in-r) | [Colab](https://colab.research.google.com/github/Amey-Thakur/R/blob/main/R%20Programming%20for%20Beginners%20-%20SkillUP%20by%20Simplilearn/Vectors%2C%20Lists%2C%20Matrix%20in%20R.ipynb))
+- [x] **Day 11** - Matrix ([Kaggle](https://www.kaggle.com/code/megasatish/vectors-lists-matrix-in-r) | [Colab](https://colab.research.google.com/github/Amey-Thakur/R/blob/main/R%20Programming%20for%20Beginners%20-%20SkillUP%20by%20Simplilearn/Vectors%2C%20Lists%2C%20Matrix%20in%20R.ipynb))
+- [x] **Day 12** - DataFrame ([Kaggle](https://www.kaggle.com/code/megasatish/dataframes-data-visualization) | [Colab](https://colab.research.google.com/github/Amey-Thakur/R/blob/main/R%20Programming%20for%20Beginners%20-%20SkillUP%20by%20Simplilearn/DataFrames%20%26%20Data%20Visualization.ipynb))
+- [x] **Day 13** - Functions in R ([Kaggle](https://www.kaggle.com/code/megasatish/functions-in-r) | [Colab](https://colab.research.google.com/github/Amey-Thakur/R/blob/main/R%20Programming%20for%20Beginners%20-%20SkillUP%20by%20Simplilearn/Functions%20in%20R.ipynb))
+- [x] **Day 14** - Data Manipulation in R ([Kaggle](https://www.kaggle.com/code/megasatish/data-manipulation-in-r) | [Colab](https://colab.research.google.com/github/Amey-Thakur/R/blob/main/R%20Programming%20for%20Beginners%20-%20SkillUP%20by%20Simplilearn/Data%20Manipulation%20in%20R.ipynb))
+- [x] **Day 15** - Data Visualization ([Kaggle](https://www.kaggle.com/code/megasatish/data-visualization) | [Colab](https://colab.research.google.com/github/Amey-Thakur/R/blob/main/R%20Programming%20for%20Beginners%20-%20SkillUP%20by%20Simplilearn/Data%20Visualization.ipynb))
+- [x] **Day 16** - Time Series Analysis in R ([Kaggle](https://www.kaggle.com/code/megasatish/time-series-analysis-in-r) | [Colab](https://colab.research.google.com/github/Amey-Thakur/R/blob/main/R%20Programming%20for%20Beginners%20-%20SkillUP%20by%20Simplilearn/Time%20Series%20Analysis%20in%20R.ipynb))
 
 ### Data Science with R Programming
-- [x] **[Day 17](https://www.kaggle.com/code/megasatish/vectors-lists-matrix-in-r)** - Data Structures
-- [x] **[Day 18](https://www.kaggle.com/code/megasatish/data-manipulation-in-r)** - Data Manipulation
-- [x] **[Day 19](https://www.kaggle.com/code/ameythakur20/data-visualization-in-r)** - Data Visualization
-- [x] **[Day 20](https://towardsdatascience.com/fundamentals-of-statistics-for-data-scientists-and-data-analysts-69d93a05aae7)** - Statistics for Data Science 
-- [x] **[Day 21](https://www.kaggle.com/code/megasatish/regression-analysis)** - Regression Analysis
-- [x] **[Day 22](https://www.kaggle.com/code/megasatish/classification)** - Classification
-- [x] **[Day 23](https://www.statmethods.net/advstats/cluster.html)** - Clustering
-- [x] **[Day 24](https://www.kaggle.com/code/megasatish/association)** - Association
+- [x] **Day 17** - Data Structures ([Kaggle](https://www.kaggle.com/code/megasatish/vectors-lists-matrix-in-r) | [Colab](https://colab.research.google.com/github/Amey-Thakur/R/blob/main/R%20Programming%20for%20Beginners%20-%20SkillUP%20by%20Simplilearn/Vectors%2C%20Lists%2C%20Matrix%20in%20R.ipynb))
+- [x] **Day 18** - Data Manipulation ([Kaggle](https://www.kaggle.com/code/megasatish/data-manipulation-in-r) | [Colab](https://colab.research.google.com/github/Amey-Thakur/R/blob/main/R%20Programming%20for%20Beginners%20-%20SkillUP%20by%20Simplilearn/Data%20Manipulation%20in%20R.ipynb))
+- [x] **Day 19** - Data Visualization ([Kaggle](https://www.kaggle.com/code/ameythakur20/data-visualization-in-r) | [Colab](https://colab.research.google.com/github/Amey-Thakur/R/blob/main/Data%20Science%20with%20R%20Programming/Data_Visualization_in_R.ipynb))
+- [x] **Day 20** - Statistics for Data Science ([Source](https://towardsdatascience.com/fundamentals-of-statistics-for-data-scientists-and-data-analysts-69d93a05aae7))
+- [x] **Day 21** - Regression Analysis ([Kaggle](https://www.kaggle.com/code/megasatish/regression-analysis) | [Colab](https://colab.research.google.com/github/Amey-Thakur/R/blob/main/Data%20Science%20with%20R%20Programming/Regression_Analysis.ipynb))
+- [x] **Day 22** - Classification ([Kaggle](https://www.kaggle.com/code/megasatish/classification) | [Colab](https://colab.research.google.com/github/Amey-Thakur/R/blob/main/Data%20Science%20with%20R%20Programming/Classification.ipynb))
+- [x] **Day 23** - Clustering ([Source](https://www.statmethods.net/advstats/cluster.html))
+- [x] **Day 24** - Association ([Kaggle](https://www.kaggle.com/code/megasatish/association) | [Colab](https://colab.research.google.com/github/Amey-Thakur/R/blob/main/Data%20Science%20with%20R%20Programming/Association.ipynb))
 
 ### Automated EDA 
-- [x] **[Day 25](https://www.kaggle.com/code/ameythakur20/r-libraries-for-automated-eda)** - R Libraries for Automated EDA
+- [x] **Day 25** - R Libraries for Automated EDA ([Kaggle](https://www.kaggle.com/code/ameythakur20/r-libraries-for-automated-eda) | [Colab](https://colab.research.google.com/github/Amey-Thakur/R/blob/main/R%20Libraries%20For%20Automated%20EDA/R_Libraries_For_Automated_EDA.ipynb))
 
 ### Statistical Analysis
-- [x] **[Day 26](https://www.kaggle.com/code/ameythakur20/statistical-analysis-on-covid19-dataset)** - Statistical Analysis on COVID Dataset
+- [x] **Day 26** - Statistical Analysis on COVID Dataset ([Kaggle](https://www.kaggle.com/code/ameythakur20/statistical-analysis-on-covid19-dataset) | [Colab](https://colab.research.google.com/github/Amey-Thakur/R/blob/main/Statistical%20Analysis%20on%20Covid19%20Dataset/Statistical_Analysis_on_Covid19_Dataset.ipynb))
 
 ### Web Scraping in R
-- [x] **[Day 27](https://www.kaggle.com/code/ameythakur20/web-scraping-in-r-part-i)** - Web Scraping (Part I) 
-- [x] **[Day 28](https://www.kaggle.com/code/ameythakur20/web-scrapping-in-r-part-ii)** - Web Scraping (Part II)
-- [x] **[Day 29](https://www.kaggle.com/code/ameythakur20/web-scraping-in-r-part-iii)** - Web Scraping (Part III)
-- [x] **[Day 30](https://www.kaggle.com/code/ameythakur20/web-scraping-in-r-part-iv)** - Web Scraping (Part IV)
+- [x] **Day 27** - Web Scraping (Part I) ([Kaggle](https://www.kaggle.com/code/ameythakur20/web-scraping-in-r-part-i) | [Colab](https://colab.research.google.com/github/Amey-Thakur/R/blob/main/Web%20Scraping%20in%20R/Web_Scraping_in_R_Part_I.ipynb))
+- [x] **Day 28** - Web Scraping (Part II) ([Kaggle](https://www.kaggle.com/code/ameythakur20/web-scrapping-in-r-part-ii) | [Colab](https://colab.research.google.com/github/Amey-Thakur/R/blob/main/Web%20Scraping%20in%20R/Web_Scrapping_in_R_Part_II.ipynb))
+- [x] **Day 29** - Web Scraping (Part III) ([Kaggle](https://www.kaggle.com/code/ameythakur20/web-scraping-in-r-part-iii) | [Colab](https://colab.research.google.com/github/Amey-Thakur/R/blob/main/Web%20Scraping%20in%20R/Web_Scraping_in_R_Part_III.ipynb))
+- [x] **Day 30** - Web Scraping (Part IV) ([Kaggle](https://www.kaggle.com/code/ameythakur20/web-scraping-in-r-part-iv) | [Colab](https://colab.research.google.com/github/Amey-Thakur/R/blob/main/Web%20Scraping%20in%20R/Web_Scraping_in_R_Part_IV.ipynb))
 
 > [!NOTE]
 > ### Detailed Daily Logs
@@ -311,7 +312,7 @@ Special thanks to the **mentors and peers** whose encouragement, discussions, an
 
   [↑ Back to Top](#readme-top)
 
-  [Authors](#authors) &nbsp;·&nbsp; [Overview](#overview) &nbsp;·&nbsp; [Curriculum](#features) &nbsp;·&nbsp; [Structure](#project-structure) &nbsp;·&nbsp; [Certifications](#results) &nbsp;·&nbsp; [Quick Start](#quick-start) &nbsp;·&nbsp; [Usage Guidelines](#usage-guidelines) &nbsp;·&nbsp; [License](#license) &nbsp;·&nbsp; [About](#about-this-repository) &nbsp;·&nbsp; [Acknowledgments](#acknowledgments)
+  [Authors](#authors) &nbsp;·&nbsp; [Overview](#overview) &nbsp;·&nbsp; [Activity](#activity) &nbsp;·&nbsp; [Curriculum](#features) &nbsp;·&nbsp; [Structure](#project-structure) &nbsp;·&nbsp; [Certifications](#results) &nbsp;·&nbsp; [Quick Start](#quick-start) &nbsp;·&nbsp; [Usage Guidelines](#usage-guidelines) &nbsp;·&nbsp; [License](#license) &nbsp;·&nbsp; [About](#about-this-repository) &nbsp;·&nbsp; [Acknowledgments](#acknowledgments)
 
   <br>
 

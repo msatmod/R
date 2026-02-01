@@ -62,6 +62,37 @@ The curriculum is governed by strict **computational data science principles**:
 
 ---
 
+## Activity & Commitment
+
+<div align="center">
+
+### 🗓️ 30-Day Coding Streak
+`✅ ✅ ✅ ✅ ✅ ✅`  
+`✅ ✅ ✅ ✅ ✅ ✅`  
+`✅ ✅ ✅ ✅ ✅ ✅`  
+`✅ ✅ ✅ ✅ ✅ ✅`  
+`✅ ✅ ✅ ✅ ✅ ✅`  
+**Continuity: 100% (30/30 Days)**
+
+<br>
+
+| Metric | Diagnostic Value |
+| :--- | :--- |
+| **Total Scholarly Effort** | ~150+ Dedicated Hours |
+| **Average Daily Output** | 5.0+ Hours / Day |
+| **Knowledge Transfer** | 100% (Mentor: [Mega Satish](https://github.com/msatmod)) |
+| **Status** | **[COMPLETED]** |
+
+<br>
+
+### 📈 Skill Evolution
+**Day 1 (Novice Syntax):** `[▬▬-------------]`  
+**Day 30 (Advanced Automation):** `[▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬]`
+
+</div>
+
+---
+
 <!-- FEATURES -->
 <a name="features"></a>
 ## Curriculum

@@ -268,16 +268,16 @@ const certificateData = [
         image: "Certificates/Amey Thakur - R Programming for Beginners - Skillup by Simplilearn.png"
     },
     {
-        name: "Data Science with R",
-        issuer: "Simplilearn (SkillUP)",
-        recipient: "Amey Thakur",
-        image: "Certificates/Amey Thakur - Data Science with R programming - Skillup by Simplilearn.png"
-    },
-    {
         name: "R Programming for Beginners",
         issuer: "Simplilearn (SkillUP)",
         recipient: "Mega Satish",
         image: "Certificates/Mega Satish - R Programming for Beginners - Skillup by Simplilearn.png"
+    },
+    {
+        name: "Data Science with R",
+        issuer: "Simplilearn (SkillUP)",
+        recipient: "Amey Thakur",
+        image: "Certificates/Amey Thakur - Data Science with R programming - Skillup by Simplilearn.png"
     },
     {
         name: "Data Science with R",

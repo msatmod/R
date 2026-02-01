@@ -152,34 +152,36 @@ function renderStats() {
     statsSection.innerHTML = `
         <div class="stat-card reveal stats-progress-card" onclick="animateStatsCard()">
             <div class="stat-header">
-                <span class="stat-icon">✅</span>
-                <span class="stat-label">Verified Course Milestones</span>
+                <i class="fas fa-check-square stat-check-icon"></i>
+                <span class="stat-label">VERIFIED COURSE MILESTONES</span>
             </div>
-            <div class="stat-value" id="milestone-count">0</div>
+            <div class="stat-value-container">
+                <span id="milestone-count" class="stat-value">0</span>
+                <span class="stat-total">/ 30</span>
+            </div>
             <div class="stats-progress-wrapper">
+                <div class="stats-bar-container">
+                    <div class="stats-bar" id="stats-bar"></div>
+                </div>
                 <div class="stats-r-icon" id="stats-r-icon">
                     <svg viewBox="0 0 24 24" fill="currentColor">
                         <path d="M12.193 2.503c-6.617 0-12 5.383-12 12s5.383 12 12 12 12-5.383 12-12-5.383-12-12-12zm4.332 17.5c-.273.084-.551.144-.834.182-1.396.184-2.822-.243-3.692-1.258l-1.996-2.332c-.104-.122-.162-.276-.162-.435v-1.666c0-.204.081-.4.225-.544.144-.144.34-.225.544-.225h.412c.506 0 .977-.253 1.259-.676l.322-.486c.071-.107.108-.232.108-.36s-.037-.253-.108-.36l-.322-.486a1.498 1.498 0 0 0-1.259-.676h-2.182v5.27h-1.636V8.636h3.818c1.506 0 2.727 1.221 2.727 2.727 0 .584-.183 1.127-.495 1.574-.336.483-.807.85-1.353 1.037.289.117.55.293.766.52l2.365 2.766c.159.186.241.424.227.662-.014.238-.119.461-.295.63s-.404.26-.642.257-.461-.131-.62-.31l-3.238-3.793z" />
                     </svg>
                 </div>
-                <div class="stats-bar-container">
-                    <div class="stats-bar" id="stats-bar"></div>
-                </div>
             </div>
-            <div style="margin-top: 1.5rem; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border-color); padding-top: 1rem;">
-                <div style="text-align: left;">
-                    <div style="font-size: 1.2rem; font-weight: 700; color: var(--accent-blue);">4</div>
-                    <div style="font-size: 0.8rem; color: var(--text-secondary); text-transform: uppercase;">Full Course Certificates</div>
+            <div class="stat-footer-grid">
+                <div class="stat-footer-item">
+                    <div class="stat-footer-value">4</div>
+                    <div class="stat-footer-label">FULL COURSE CERTIFICATES</div>
                 </div>
-                <div style="text-align: right;">
-                    <div style="font-size: 1.2rem; font-weight: 700; color: var(--accent-purple);">${progressPercent}%</div>
-                    <div style="font-size: 0.8rem; color: var(--text-secondary); text-transform: uppercase;">Mastery Level</div>
+                <div class="stat-footer-item align-right">
+                    <div class="stat-footer-value accent-purple">${progressPercent}%</div>
+                    <div class="stat-footer-label">MASTERY LEVEL</div>
                 </div>
             </div>
         </div>
     `;
 
-    // Trigger animation after render
     setTimeout(animateStatsCard, 100);
 }
 

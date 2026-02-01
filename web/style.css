@@ -139,8 +139,8 @@ body {
 /* Mobile Hero Adjustment */
 @media (max-width: 768px) {
     .hero {
-        padding-top: 5rem;
-        /* Clear top controls */
+        padding-top: 6rem;
+        /* Cleaner clearance for controls */
     }
 }
 
@@ -1302,6 +1302,20 @@ body {
 
     .section-title {
         font-size: 1.8rem;
+    }
+
+    /* Certificate Mobile Center */
+    .cert-info {
+        text-align: center;
+    }
+
+    /* Fix Overflowing Icons */
+    .stats-r-icon {
+        left: 50% !important;
+        /* Force center on mobile */
+        transform: translate(-50%, -50%) !important;
+        bottom: -20px;
+        /* Adjust position */
     }
 }
 

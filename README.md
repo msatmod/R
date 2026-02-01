@@ -8,7 +8,7 @@
   [![Technology](https://img.shields.io/badge/Technology-R%20%7C%20Data%20Science-blue)](https://github.com/Amey-Thakur/R)
   [![Developed by Amey Thakur and Mega Satish](https://img.shields.io/badge/Developed%20by-Amey%20Thakur%20%26%20Mega%20Satish-blue.svg)](https://github.com/Amey-Thakur/R)
 
-  A comprehensive 30-day educational journey into R programming, statistical analysis, and data science, featuring a structured curriculum from basic syntax to advanced web scraping and automated EDA.
+  A disciplined 30-day collaborative challenge undertaken to master R programming, statistical analysis, and data science, featuring a structured curriculum from basic syntax to advanced web scraping and certification.
 
   **[Source Code](https://github.com/Amey-Thakur/R)** &nbsp;·&nbsp; **[Certifications](#results)** &nbsp;·&nbsp; **[Curriculum](#features)**
 

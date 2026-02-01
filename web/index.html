@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R Programming Challenge | Scholarly Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Outfit:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="dark-theme">
+    <div id="app">
+        <header class="hero">
+            <div class="glass-panel">
+                <nav class="breadcrumb">
+                    <span class="root">R Programming Challenge</span>
+                    <span class="separator">/</span>
+                    <span class="current">Dashboard</span>
+                </nav>
+                <h1 class="premium-title">R Programming <span class="gradient-text">Challenge</span></h1>
+                <p class="subtitle">A disciplined 30-day journey through the R ecosystem, statistical analysis, and data
+                    science.</p>
+                <div class="authors-badge">
+                    <div class="author">
+                        <img src="https://github.com/Amey-Thakur.png" alt="Amey Thakur">
+                        <span>Amey Thakur</span>
+                    </div>
+                    <div class="author">
+                        <img src="https://msatmod.github.io/R/Mega/Mega.png" alt="Mega Satish">
+                        <span>Mega Satish</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main class="container">
+            <section id="progress" class="stats-section">
+                <!-- Stats will be injected here -->
+            </section>
+
+            <section id="certifications" class="cert-section">
+                <h2 class="section-title">Academic Achievements</h2>
+                <div class="cert-grid" id="cert-grid">
+                    <!-- Certificates will be injected here -->
+                </div>
+            </section>
+
+            <section id="curriculum" class="curriculum-section">
+                <h2 class="section-title">Curriculum Explorer</h2>
+                <div class="filter-bar">
+                    <button class="filter-btn active" data-filter="all">All Modules</button>
+                    <button class="filter-btn" data-filter="basics">Basics</button>
+                    <button class="filter-btn" data-filter="stats">Statistics</button>
+                    <button class="filter-btn" data-filter="advanced">Advanced</button>
+                </div>
+                <div class="day-grid" id="day-grid">
+                    <!-- Days will be injected here -->
+                </div>
+            </section>
+        </main>
+
+        <footer class="main-footer">
+            <p>&copy; 2024 - 2025 Amey Thakur & Mega Satish. All Rights Reserved.</p>
+            <div class="footer-links">
+                <a href="https://github.com/Amey-Thakur/R">GitHub Repository</a>
+                <a href="#readme-top">Back to README</a>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Notebook Viewer Modal -->
+    <div id="notebook-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modal-title">Notebook Viewer</h3>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body" id="notebook-content">
+                <p>Loading notebook content...</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>

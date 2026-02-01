@@ -1,0 +1,65 @@
+name: "Deploy R Programming Challenge 🏛️💎"
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install nbconvert notebook pandocfilters jinja2
+
+      - name: Create Web Directories
+        run: mkdir -p web/notebooks web/Certificates web/Mega
+
+      - name: Copy Assets
+        run: |
+          cp -r Certificates/* web/Certificates/
+          cp -r Mega/* web/Mega/
+
+      - name: Convert Notebooks to HTML
+        run: |
+          find . -name "*.ipynb" -not -path "./web/*" -exec jupyter nbconvert --to html --template full --output-dir=./web/notebooks {} +
+          
+      - name: Standardize Filenames
+        run: |
+          cd web/notebooks
+          for f in *.html; do
+            # Extract number from filename (e.g., "Day 1 - ..." -> "01")
+            num=$(echo "$f" | grep -oEi 'Day [0-9]+' | grep -oEi '[0-9]+')
+            if [ ! -z "$num" ]; then
+              # Pad with leading zero if needed
+              formatted_num=$(printf "%02d" $num)
+              mv "$f" "day${formatted_num}.html"
+            fi
+          done
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: './web'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

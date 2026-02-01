@@ -121,34 +121,41 @@ The curriculum is governed by strict **computational data science principles**:
 ```python
 R/
 │
-├── Certificates/                                    # Course Completion Credentials
-│   ├── Amey Thakur - Data Science with R...pdf      # Amey Thakur Certification
-│   ├── Mega Satish - Data Science with R...pdf      # Mega Satish Certification
-│   └── ...                                          # Additional Certificates
+├── docs/                            # Documentation Layer
+│   └── SPECIFICATION.md             # Technical Architecture
 │
-├── Data Science with R Programming/                 # Advanced Analytics Module
-│   └── ...                                          # Days 17-24 (Regression, Classification)
+├── Mega/                            # Attribution Assets
+│   ├── Filly.jpg                    # Companion (Filly)
+│   └── Mega.png                     # Profile Image (Mega Satish)
 │
-├── Getting Started with R Programming/              # Foundational Module
-│   └── ...                                          # Days 1-4 (Intro, Loading Data)
+├── Certificates/                    # Course Completion Credentials
+│   ├── Amey Thakur...png            # Amey Thakur Certification (Image)
+│   ├── Mega Satish...png            # Mega Satish Certification (Image)
+│   └── ...                          # Original PDF & Asset Resources
 │
-├── R Libraries For Automated EDA/                   # Automation Module
-│   └── ...                                          # Day 25 (Auto-EDA)
+├── Data Science with R Programming/ # Advanced Analytics Module
+│   └── ...                          # Days 17-24 (Regression, Classification)
 │
-├── R Programming for Beginners/                     # Core Syntax Module
-│   └── ...                                          # Days 5-16 (Vectors, Matrices, DFs)
+├── Getting Started with R.../       # Foundational Module
+│   └── ...                          # Days 1-4 (Intro, Loading Data)
 │
-├── Statistical Analysis on Covid19/                 # Applied Statistics
-│   └── ...                                          # Day 26 (Real-world Analysis)
+├── R Libraries For Automated EDA/   # Automation Module
+│   └── ...                          # Day 25 (Auto-EDA)
 │
-├── Web Scraping in R/                               # Data Collection Module
-│   └── ...                                          # Days 27-30 (Scraping Pipelines)
+├── R Programming for Beginners/     # Core Syntax Module
+│   └── ...                          # Days 5-16 (Vectors, Matrices, DFs)
 │
-├── CITATION.cff                                     # Project Citation Manifest
-├── codemeta.json                                    # Metadata Standard
-├── LICENSE                                          # MIT License
-├── README.md                                        # Project Documentation
-└── SECURITY.md                                      # Security Protocols
+├── Statistical Analysis on Covid19/ # Applied Statistics
+│   └── ...                          # Day 26 (Real-world Analysis)
+│
+├── Web Scraping in R/               # Data Collection Module
+│   └── ...                          # Days 27-30 (Scraping Pipelines)
+│
+├── CITATION.cff                     # Project Citation Manifest
+├── codemeta.json                    # Metadata Standard
+├── LICENSE                          # MIT License
+├── README.md                        # Project Entrance
+└── SECURITY.md                      # Security Protocols
 ```
 
 ---

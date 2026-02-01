@@ -1271,14 +1271,17 @@ body {
 
     .stat-unit {
         width: 100%;
+        display: flex;
+        /* Enforce flex */
+        flex-direction: column;
         align-items: center;
+        justify-content: center;
     }
 
     /* Improved Identity Spacing */
     .hero-identity-grid {
         flex-direction: column;
         gap: 2.5rem;
-        /* More breathable */
         width: 100%;
         margin-top: 2rem;
         margin-bottom: 1rem;
@@ -1286,10 +1289,14 @@ body {
 
     .stat-header {
         justify-content: center;
+        text-align: center;
+        /* Ensure text alignment */
+        width: 100%;
     }
 
     .stat-value-container {
         justify-content: center;
+        width: 100%;
     }
 
     .loader-r-wrapper,
@@ -1304,15 +1311,17 @@ body {
     /* Certificate Mobile Center */
     .cert-info {
         text-align: center;
+        width: 100%;
+        /* Ensure full width for centering */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
-    /* Fix Overflowing Icons */
+    /* Fix Overflowing Icons - Let JS control position */
     .stats-r-icon {
-        left: 50% !important;
-        transform: translate(-50%, -50%) !important;
         bottom: -20px;
-        max-width: 100%;
-        /* Prevent overflow */
+        /* Removed forced centering to allow progress bar to work */
     }
 }
 

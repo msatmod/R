@@ -9,6 +9,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Start splash progress
     moveSplashProgress();
+
+    // Start stats animation after splash disappears
+    setTimeout(animateStatsCard, 2000);
 });
 
 function moveSplashProgress() {
@@ -26,6 +29,38 @@ function moveSplashProgress() {
             if (splashIcon) splashIcon.style.left = width + '%';
         }
     }, 50);
+}
+
+function animateStatsCard() {
+    const countElement = document.getElementById('milestone-count');
+    const barElement = document.getElementById('stats-bar');
+    const iconElement = document.getElementById('stats-r-icon');
+
+    if (!countElement || !barElement || !iconElement) return;
+
+    // Reset for animation
+    countElement.innerText = '0';
+    barElement.style.width = '0%';
+    iconElement.style.left = '0%';
+
+    let count = 0;
+    const target = 30;
+    const duration = 1500;
+    const frames = duration / 16;
+    const increment = target / frames;
+
+    const timer = setInterval(() => {
+        count += increment;
+        if (count >= target) {
+            count = target;
+            clearInterval(timer);
+        }
+
+        const progress = (count / target) * 100;
+        countElement.innerText = Math.floor(count);
+        barElement.style.width = progress + '%';
+        iconElement.style.left = progress + '%';
+    }, 16);
 }
 
 function dismissSkeletonLoader() {
@@ -77,28 +112,41 @@ function toggleTheme() {
 // --- Data Rendering ---
 function renderStats() {
     const statsSection = document.getElementById('progress');
-    const totalDays = curriculumData.length;
     const completedDays = curriculumData.filter(d => d.kaggle || d.colab || d.source).length;
     const progressPercent = Math.round((completedDays / 30) * 100);
 
     statsSection.innerHTML = `
-        <div class="glass-panel stats-container reveal">
-            <div class="stat-item">
-                <span class="stat-value">${completedDays}/30</span>
-                <span class="stat-label">Milestones Reached</span>
+        <div class="stat-card reveal stats-progress-card" onclick="animateStatsCard()">
+            <div class="stat-header">
+                <span class="stat-icon">✅</span>
+                <span class="stat-label">Verified Course Milestones</span>
             </div>
-            <div class="stat-item progress-wrapper">
-                <div class="progress-bar">
-                    <div class="progress-fill" style="width: ${progressPercent}%"></div>
+            <div class="stat-value" id="milestone-count">0</div>
+            <div class="stats-progress-wrapper">
+                <div class="stats-r-icon" id="stats-r-icon">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12.193 2.503c-6.617 0-12 5.383-12 12s5.383 12 12 12 12-5.383 12-12-5.383-12-12-12zm4.332 17.5c-.273.084-.551.144-.834.182-1.396.184-2.822-.243-3.692-1.258l-1.996-2.332c-.104-.122-.162-.276-.162-.435v-1.666c0-.204.081-.4.225-.544.144-.144.34-.225.544-.225h.412c.506 0 .977-.253 1.259-.676l.322-.486c.071-.107.108-.232.108-.36s-.037-.253-.108-.36l-.322-.486a1.498 1.498 0 0 0-1.259-.676h-2.182v5.27h-1.636V8.636h3.818c1.506 0 2.727 1.221 2.727 2.727 0 .584-.183 1.127-.495 1.574-.336.483-.807.85-1.353 1.037.289.117.55.293.766.52l2.365 2.766c.159.186.241.424.227.662-.014.238-.119.461-.295.63s-.404.26-.642.257-.461-.131-.62-.31l-3.238-3.793z" />
+                    </svg>
                 </div>
-                <span class="stat-label">${progressPercent}% Mastered</span>
+                <div class="stats-bar-container">
+                    <div class="stats-bar" id="stats-bar"></div>
+                </div>
             </div>
-            <div class="stat-item">
-                <span class="stat-value">4</span>
-                <span class="stat-label">Verified Certs</span>
+            <div style="margin-top: 1.5rem; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border-color); padding-top: 1rem;">
+                <div style="text-align: left;">
+                    <div style="font-size: 1.2rem; font-weight: 700; color: var(--accent-blue);">4</div>
+                    <div style="font-size: 0.8rem; color: var(--text-secondary); text-transform: uppercase;">Full Course Certificates</div>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-size: 1.2rem; font-weight: 700; color: var(--accent-purple);">${progressPercent}%</div>
+                    <div style="font-size: 0.8rem; color: var(--text-secondary); text-transform: uppercase;">Mastery Level</div>
+                </div>
             </div>
         </div>
     `;
+
+    // Trigger animation after render
+    setTimeout(animateStatsCard, 100);
 }
 
 function renderCertificates() {

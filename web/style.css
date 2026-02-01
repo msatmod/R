@@ -1162,42 +1162,7 @@ body {
 
 /* Responsive */
 /* Responsive */
-@media (max-width: 768px) {
-    .premium-title {
-        font-size: 2.2rem;
-    }
-
-    .authors-badge {
-        flex-direction: column;
-        align-items: center;
-        gap: 1.5rem;
-    }
-
-    .day-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .hero-identity-grid {
-        flex-direction: column;
-        gap: 2rem;
-    }
-
-    .stats-top-row {
-        flex-direction: column;
-        align-items: center;
-        gap: 2rem;
-        text-align: center;
-    }
-
-    .stat-unit.align-right {
-        align-items: center;
-        text-align: center;
-    }
-
-    .glass-panel {
-        padding: 1.5rem 1rem;
-    }
-}
+/* Consolidated Responsive Styles */
 
 /* --- Responsive Multi-Device Evolution --- */
 
@@ -1227,7 +1192,7 @@ body {
 
 @media screen and (max-width: 768px) {
     .premium-title {
-        font-size: 2.2rem;
+        font-size: 2rem;
     }
 
     .top-controls {
@@ -1242,11 +1207,15 @@ body {
     }
 
     .glass-panel {
-        padding: 1.5rem;
+        padding: 1.5rem 1rem;
+    }
+
+    .header-content {
+        padding: 0 1rem;
     }
 
     .stat-value {
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
 
     .day-grid {
@@ -1258,7 +1227,54 @@ body {
     }
 
     .authors-badge {
-        gap: 1rem;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    /* Stack Identity Grid Vertical */
+    .hero-identity-grid {
+        flex-direction: column;
+        gap: 2rem;
+        width: 100%;
+        margin-top: 1.5rem;
+    }
+
+    .profile-unit {
+        width: 100%;
+    }
+
+    .repo-btn {
+        width: 90%;
+        justify-content: center;
+        margin: 0 auto;
+    }
+
+    /* Stack Stats Vertical */
+    .stats-top-row {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .stat-unit {
+        width: 100%;
+        align-items: center;
+    }
+
+    .stat-unit.align-right {
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .stat-header {
+        justify-content: center;
+    }
+
+    .stat-value-container {
+        justify-content: center;
     }
 
     .loader-r-wrapper,

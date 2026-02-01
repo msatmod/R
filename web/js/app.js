@@ -327,7 +327,7 @@ function openNotebook(day, title) {
         </div>
     `;
 
-    // Premium delay for atmospheric "loading" & allowing local render
+    // Atmospheric initialization delay
     setTimeout(() => {
         // Find the day data to check for Colab fallback
         const dayData = curriculumData.find(d => d.day === day);
@@ -343,33 +343,32 @@ function openNotebook(day, title) {
         `;
 
         const iframe = content.querySelector('iframe');
+        let loadConfirmed = false;
 
-        // Robust Error Handling for Local Files
+        // Failsafe: If not loaded in 5 seconds, show fallback
+        const fallbackTimer = setTimeout(() => {
+            if (!loadConfirmed) {
+                console.warn(`Notebook load timed out for day${day}.html`);
+                handleNotebookError(iframe, dayData ? dayData.colab : '');
+            }
+        }, 5000);
+
+        // Success Handler
         iframe.onload = () => {
-            // Give the browser a moment to populate the DOM after load event
-            setTimeout(() => {
-                try {
-                    const doc = iframe.contentDocument || iframe.contentWindow.document;
-                    if (!doc || doc.body.innerHTML.includes('404') || doc.body.children.length === 0) {
-                        console.warn(`Local notebook day${day}.html might be missing or empty.`);
-                        handleNotebookError(iframe, dayData ? dayData.colab : '');
-                    } else {
-                        console.log(`Successfully loaded local notebook: day${day}.html`);
-                    }
-                } catch (e) {
-                    // Cross-origin might block access if local, but usually fine for same-origin
-                    // If checking fails, assumes success as user can see it
-                    console.log("Iframe loaded (Cross-origin check avoided).");
-                }
-            }, 500); // Small buffer after load
+            loadConfirmed = true;
+            clearTimeout(fallbackTimer);
+            console.log(`Successfully loaded local notebook: day${day}.html`);
         };
 
+        // Error Handler
         iframe.onerror = () => {
+            loadConfirmed = false; // Just in case
+            clearTimeout(fallbackTimer);
             console.error("Failed to load local notebook.");
             handleNotebookError(iframe, dayData ? dayData.colab : '');
         };
 
-    }, 2500); // Extended delay for smoother experience
+    }, 1200);
 }
 
 function handleNotebookError(iframe, colabUrl) {

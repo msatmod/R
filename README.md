@@ -162,11 +162,11 @@ R/
   <i>Certified completion of foundational R programming concepts.</i>
   <br><br>
   <a href="Certificates/Amey%20Thakur%20-%20R%20Programming%20for%20Beginners%20-%20Skillup%20by%20Simplilearn.pdf">
-    <img src="https://img.shields.io/badge/Certificate-Amey%20Thakur-blue?style=for-the-badge&logo=simplilearn" alt="Amey Thakur Certificate">
+    <img src="Certificates/Amey%20Thakur%20-%20R%20Programming%20for%20Beginners%20-%20Skillup%20by%20Simplilearn.png" width="48%" alt="Amey Thakur Certificate">
   </a>
-  &nbsp;&nbsp;
+  &nbsp;
   <a href="Certificates/Mega%20Satish%20-%20R%20Programming%20for%20Beginners%20-%20Skillup%20by%20Simplilearn.pdf">
-    <img src="https://img.shields.io/badge/Certificate-Mega%20Satish-purple?style=for-the-badge&logo=simplilearn" alt="Mega Satish Certificate">
+    <img src="Certificates/Mega%20Satish%20-%20R%20Programming%20for%20Beginners%20-%20Skillup%20by%20Simplilearn.png" width="48%" alt="Mega Satish Certificate">
   </a>
   <br><br><br>
 
@@ -175,11 +175,11 @@ R/
   <i>Advanced certification in data science methodologies using R.</i>
   <br><br>
   <a href="Certificates/Amey%20Thakur%20-%20Data%20Science%20with%20R%20programming%20-%20Skillup%20by%20Simplilearn.pdf">
-    <img src="https://img.shields.io/badge/Certificate-Amey%20Thakur-blue?style=for-the-badge&logo=simplilearn" alt="Amey Thakur Certificate">
+    <img src="Certificates/Amey%20Thakur%20-%20Data%20Science%20with%20R%20programming%20-%20Skillup%20by%20Simplilearn.png" width="48%" alt="Amey Thakur Certificate">
   </a>
-  &nbsp;&nbsp;
+  &nbsp;
   <a href="Certificates/Mega%20Satish%20-%20Data%20Science%20with%20R%20programming%20-%20Skillup%20by%20Simplilearn.pdf">
-    <img src="https://img.shields.io/badge/Certificate-Mega%20Satish-purple?style=for-the-badge&logo=simplilearn" alt="Mega Satish Certificate">
+    <img src="Certificates/Mega%20Satish%20-%20Data%20Science%20with%20R%20programming%20-%20Skillup%20by%20Simplilearn.png" width="48%" alt="Mega Satish Certificate">
   </a>
   <br><br>
 </div>

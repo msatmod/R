@@ -123,84 +123,88 @@ function toggleTheme() {
 
 // --- Data Rendering ---
 function renderStats() {
-    const statsSection = document.getElementById('progress');
-    const completedDays = curriculumData.filter(d => d.kaggle || d.colab || d.source).length;
+    const statsContainer = document.getElementById('progress');
+    if (!statsContainer) return;
 
-    statsSection.innerHTML = `
-        <div class="stat-card reveal stats-progress-card" onclick="animateStatsCard()">
-            <div class="stats-top-row">
-                <div class="stat-unit">
-                    <div class="stat-header">
-                        <i class="fas fa-check-square stat-check-icon"></i>
-                        <span class="stat-label">VERIFIED COURSE MILESTONES</span>
-                    </div>
-                    <div class="stat-value-container">
-                        <span id="milestone-count" class="stat-value">0</span>
-                        <span class="stat-total">/ 30</span>
-                    </div>
+    statsContainer.innerHTML = `
+        <div class="stats-top-row">
+            <div class="stat-unit">
+                <div class="stat-header">
+                    <i class="fas fa-check-square stat-check-icon"></i>
+                    <span class="stat-label">COURSE MILESTONES</span>
                 </div>
-                <div class="stat-unit align-right">
-                    <div class="stat-header justify-end">
-                        <span class="stat-label">FULL COURSE CERTIFICATES</span>
-                        <i class="fas fa-certificate stat-cert-icon"></i>
-                    </div>
-                    <div class="stat-value-container">
-                        <span class="stat-value">4</span>
-                    </div>
+                <div class="stat-value-container">
+                    <span id="milestone-count" class="stat-value">0</span>
+                    <span class="stat-total">/ 30</span>
                 </div>
             </div>
-            
-            <div class="stats-animation-track">
-                <div class="stats-r-icon" id="stats-r-icon">
-                    <svg viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12.193 2.503c-6.617 0-12 5.383-12 12s5.383 12 12 12 12-5.383 12-12-5.383-12-12-12zm4.332 17.5c-.273.084-.551.144-.834.182-1.396.184-2.822-.243-3.692-1.258l-1.996-2.332c-.104-.122-.162-.276-.162-.435v-1.666c0-.204.081-.4.225-.544.144-.144.34-.225.544-.225h.412c.506 0 .977-.253 1.259-.676l.322-.486c.071-.107.108-.232.108-.36s-.037-.253-.108-.36l-.322-.486a1.498 1.498 0 0 0-1.259-.676h-2.182v5.27h-1.636V8.636h3.818c1.506 0 2.727 1.221 2.727 2.727 0 .584-.183 1.127-.495 1.574-.336.483-.807.85-1.353 1.037.289.117.55.293.766.52l2.365 2.766c.159.186.241.424.227.662-.014.238-.119.461-.295.63s-.404.26-.642.257-.461-.131-.62-.31l-3.238-3.793z" />
-                    </svg>
+            <div class="stat-unit align-right">
+                <div class="stat-header justify-end">
+                    <span class="stat-label">FULL CERTIFICATES</span>
+                    <i class="fas fa-certificate stat-cert-icon"></i>
                 </div>
-                <div class="stats-subtle-line"></div>
+                <div class="stat-value-container">
+                    <span id="cert-count" class="stat-value">0</span>
+                </div>
             </div>
+        </div>
+        
+        <div class="stats-animation-track">
+            <div class="stats-r-icon" id="stats-r-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12.193 2.503c-6.617 0-12 5.383-12 12s5.383 12 12 12 12-5.383 12-12-5.383-12-12-12zm4.332 17.5c-.273.084-.551.144-.834.182-1.396.184-2.822-.243-3.692-1.258l-1.996-2.332c-.104-.122-.162-.276-.162-.435v-1.666c0-.204.081-.4.225-.544.144-.144.34-.225.544-.225h.412c.506 0 .977-.253 1.259-.676l.322-.486c.071-.107.108-.232.108-.36s-.037-.253-.108-.36l-.322-.486a1.498 1.498 0 0 0-1.259-.676h-2.182v5.27h-1.636V8.636h3.818c1.506 0 2.727 1.221 2.727 2.727 0 .584-.183 1.127-.495 1.574-.336.483-.807.85-1.353 1.037.289.117.55.293.766.52l2.365 2.766c.159.186.241.424.227.662-.014.238-.119.461-.295.63s-.404.26-.642.257-.461-.131-.62-.31l-3.238-3.793z" />
+                </svg>
+            </div>
+            <div class="stats-subtle-line"></div>
+        </div>
 
-            <div class="stat-center-unit">
-                <div id="mastery-count" class="stat-footer-value accent-purple">0%</div>
-                <div class="stat-footer-label">MASTERY LEVEL</div>
-            </div>
+        <div class="stat-center-unit">
+            <div id="mastery-count" class="stat-footer-value accent-purple">0%</div>
+            <div class="stat-footer-label">MASTERY LEVEL</div>
         </div>
     `;
 
-    setTimeout(animateStatsCard, 100);
+    setTimeout(animateStatsCard, 500);
 }
 
 function animateStatsCard() {
     const milestoneCount = document.getElementById('milestone-count');
+    const certCount = document.getElementById('cert-count');
     const masteryCount = document.getElementById('mastery-count');
     const iconElement = document.getElementById('stats-r-icon');
 
     if (!milestoneCount || !masteryCount || !iconElement) return;
 
-    const targetMilestones = 30;
-    const targetMastery = 100;
-    const duration = 2000;
-    const startTime = performance.now();
+    const completedDays = curriculumData.filter(d => d.kaggle || d.colab || d.source).length;
+    const targetMilestones = completedDays;
+    const targetCerts = 4;
+    const targetMastery = Math.round((completedDays / 30) * 100);
+    const duration = 2500;
 
-    function update(currentTime) {
-        const elapsed = currentTime - startTime;
-        const progress = Math.min(elapsed / duration, 1);
-        const ease = 1 - Math.pow(1 - progress, 3); // Cubic Out
+    function animateValue(obj, start, end, duration, suffix = '') {
+        let startTimestamp = null;
+        const step = (timestamp) => {
+            if (!startTimestamp) startTimestamp = timestamp;
+            const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+            const ease = 1 - Math.pow(1 - progress, 4); // Quartic Out for smoothness
 
-        const currentMilestones = Math.floor(ease * targetMilestones);
-        const currentMastery = Math.floor(ease * targetMastery);
+            const current = Math.floor(ease * (end - start) + start);
+            obj.innerHTML = current + suffix;
 
-        milestoneCount.textContent = currentMilestones;
-        masteryCount.textContent = currentMastery + '%';
+            if (obj === milestoneCount) {
+                iconElement.style.left = (ease * (end / 30) * 100) + '%';
+            }
 
-        // Progress bar icon follows the same ease
-        iconElement.style.left = (ease * 100) + '%';
-
-        if (progress < 1) {
-            requestAnimationFrame(update);
-        }
+            if (progress < 1) {
+                window.requestAnimationFrame(step);
+            }
+        };
+        window.requestAnimationFrame(step);
     }
 
-    requestAnimationFrame(update);
+    animateValue(milestoneCount, 0, targetMilestones, duration);
+    animateValue(certCount, 0, targetCerts, duration);
+    animateValue(masteryCount, 0, targetMastery, duration, '%');
 }
 
 function renderCertificates() {

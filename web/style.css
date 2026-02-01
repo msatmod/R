@@ -87,22 +87,26 @@ body {
     }
 }
 
-@keyframes hubFloat {
 
-    0%,
-    100% {
-        transform: translateY(0) scale(1);
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
     }
 
     50% {
-        transform: translateY(-10px) scale(1.01);
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
     }
 }
 
 .glass-panel {
-    background: var(--panel-bg);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    background: linear-gradient(-45deg, rgba(22, 27, 34, 0.6), rgba(88, 166, 255, 0.05), rgba(22, 27, 34, 0.6), rgba(188, 140, 255, 0.05));
+    background-size: 400% 400%;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
     border: 1px solid var(--border-color);
     border-radius: 24px;
     padding: 3rem;
@@ -112,13 +116,14 @@ body {
     transform: translateY(30px);
     animation:
         slideUpFade 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards,
-        hubFloat 6s ease-in-out infinite 0.8s;
-    transition: box-shadow 0.4s ease, border-color 0.4s ease;
+        gradientBG 15s ease infinite;
+    transition: all 0.4s ease;
 }
 
 .glass-panel:hover {
+    transform: translateY(-8px);
     border-color: var(--accent-blue);
-    box-shadow: 0 15px 45px rgba(88, 166, 255, 0.15);
+    box-shadow: 0 20px 50px rgba(88, 166, 255, 0.15);
 }
 
 /* Hero Section */
@@ -253,32 +258,12 @@ body {
     border-radius: 2px;
 }
 
-/* Stats Section Re-refinement */
-.stats-container {
-    padding: 1rem 0;
-    margin-bottom: 3rem;
-    /* Reduced from 6rem */
-}
 
-.stats-progress-card {
-    background: var(--panel-bg);
-    border: 1px solid var(--border-color);
-    border-radius: 20px;
-    padding: 1.5rem 2.5rem;
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-    max-width: 900px;
-    margin: 0 auto;
-    animation: hubFloat 8s ease-in-out infinite;
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-}
+/* Merged stats logic in hero */
 
-.stats-progress-card:hover {
-    transform: translateY(-5px) scale(1.01);
-    border-color: var(--accent-blue);
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+[data-theme="light"] .stats-progress-card {
+    background: linear-gradient(-45deg, var(--panel-bg), #e6f1ff, var(--panel-bg), #f5f0ff);
+    background-size: 400% 400%;
 }
 
 .stats-top-row {

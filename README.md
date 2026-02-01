@@ -58,7 +58,7 @@ The curriculum is governed by strict **computational data science principles**:
 > [!TIP]
 > **Challenge Completion**
 >
-> This repository represents the successful completion of a rigorous **30-Day Coding Challenge**. Challenge successfully completed with **Mega Satish**. Each directory corresponds to specific daily milestones, ensuring a linear and verifiable progression of skills.
+> This repository represents the successful completion of a rigorous **30-Day Coding Challenge**. Challenge successfully completed with [**Mega Satish**](https://github.com/msatmod/R). Each directory corresponds to specific daily milestones, ensuring a linear and verifiable progression of skills.
 
 ---
 

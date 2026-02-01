@@ -5,7 +5,7 @@
 
   [![License: MIT](https://img.shields.io/badge/License-MIT-lightgrey)](LICENSE)
   ![Status](https://img.shields.io/badge/Status-Completed-success)
-  [![Technology](https://img.shields.io/badge/Technology-R%20%7C%20Data%20Science-blue)](https://github.com/Amey-Thakur/R)
+  [![Technology](https://img.shields.io/badge/Technology-R%20%7C%20Data%20Science-276DC3)](https://github.com/Amey-Thakur/R)
   [![Developed by Amey Thakur and Mega Satish](https://img.shields.io/badge/Developed%20by-Amey%20Thakur%20%26%20Mega%20Satish-blue.svg)](https://github.com/Amey-Thakur/R)
 
   A disciplined 30-day collaborative challenge undertaken to master R programming, statistical analysis, and data science, featuring a structured curriculum from basic syntax to advanced web scraping and certification.

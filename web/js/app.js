@@ -381,10 +381,16 @@ function renderNotebookControls(day, dayData) {
     if (!controls) return;
 
     const colabLink = dayData ? dayData.colab : '#';
-    const localLink = `notebooks/day${day}.html`;
+    let downloadLink = '#';
+
+    // Construct Raw GitHub Link for IDL/Python Download
+    if (colabLink && colabLink.includes('colab.research.google.com/github')) {
+        const rawPath = colabLink.replace('https://colab.research.google.com/github/', '');
+        downloadLink = `https://raw.githubusercontent.com/${rawPath.replace('/blob/', '/')}`;
+    }
 
     controls.innerHTML = `
-        <a href="${localLink}" download="R_Day_${day}.html" class="control-icon-btn download-action" title="Download Local HTML">
+        <a href="${downloadLink}" download="Day_${day}_Notebook.ipynb" class="control-icon-btn download-action" title="Download Python Notebook (.ipynb)">
             <i class="fas fa-download"></i>
         </a>
         <button class="control-icon-btn" onclick="shareNotebook('${colabLink}')" title="Share Notebook">

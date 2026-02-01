@@ -1356,3 +1356,46 @@ body {
         gap: 0.5rem;
     }
 }
+
+/* Modal Controls Simplified */
+.modal-controls {
+    display: flex;
+    gap: 0.5rem;
+    margin-left: auto;
+    margin-right: 1.5rem;
+    /* Closer to close button */
+    align-items: center;
+    z-index: 10;
+}
+
+.control-icon-btn {
+    background: transparent !important;
+    border: none !important;
+    color: var(--text-secondary);
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 1.2rem;
+    padding: 0;
+    margin: 0;
+    box-shadow: none !important;
+}
+
+.control-icon-btn:hover {
+    color: var(--accent-blue);
+    transform: scale(1.1);
+    background: rgba(88, 166, 255, 0.1) !important;
+    border-radius: 50%;
+}
+
+.control-icon-btn.download-action {
+    color: var(--text-secondary);
+}
+
+.control-icon-btn.download-action:hover {
+    color: var(--accent-blue);
+}

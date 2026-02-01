@@ -45,7 +45,7 @@
 <a name="overview"></a>
 ## Overview
 
-**R Programming Challenge** was conceived as a rigorous collaborative initiative between [**Amey Thakur**](https://github.com/Amey-Thakur) and [**Mega Satish**](https://github.com/msatmod). Driven by a shared objective to master the R language, this project represents the culmination of a disciplined 30-day coding journey. Through mutual dedication and daily practice, we successfully navigated the curriculum—from foundational logic to advanced automation—earning recognized certifications as a testament to this scholarly effort.
+**R Programming Challenge** was conceived as a rigorous collaborative initiative between [**Amey Thakur**](https://github.com/Amey-Thakur) and [**Mega Satish**](https://github.com/msatmod). Driven by a shared objective to master the R language, this project represents the culmination of a disciplined 30-day coding journey. Through mutual dedication and daily practice, we successfully navigated the curriculum, from foundational logic to advanced automation, earning recognized certifications as a testament to this scholarly effort.
 
 The project demonstrates a disciplined approach to upskilling in Data Science, leveraging the **R Ecosystem** (RStudio, Tidyverse, ggplot2) to solve real-world analytical problems.
 
@@ -261,7 +261,7 @@ This project features **R Programming Challenge**, a comprehensive study conduct
 
 ### Acknowledgments
 
-Grateful acknowledgment to [**Mega Satish**](https://github.com/msatmod) for her exceptional collaboration and scholarly partnership during this R Programming Challenge. Her intellectual agility—a veritable superpower to rapidly synthesize complex logic and articulate it with clarity—was the driving force behind this project's success. She processed new concepts with remarkable speed, clarifying intricate details in a way that made learning reciprocal and effortless. Her engagement was not merely supportive but vital; this rigorous curriculum would not have been completed without her steady discipline, ability to simplify the complex, and constant encouragement. Thank you, Mega, for everything you shared and taught along the way.
+Grateful acknowledgment to [**Mega Satish**](https://github.com/msatmod) for her exceptional collaboration and scholarly partnership during this R Programming Challenge. Her intellectual agility, a veritable superpower to rapidly synthesize complex logic and articulate it with clarity, was the driving force behind this project's success. She processed new concepts with remarkable speed, clarifying intricate details in a way that made learning reciprocal and effortless. Her engagement was not merely supportive but vital; this rigorous curriculum would not have been completed without her steady discipline, ability to simplify the complex, and constant encouragement. Thank you, Mega, for everything you shared and taught along the way.
 
 Special thanks to the **mentors and peers** whose encouragement, discussions, and support contributed meaningfully to this learning experience.
 

@@ -1213,7 +1213,7 @@ body {
     .premium-title {
         font-size: 2rem;
         text-align: center;
-        margin-top: 1rem;
+        margin-top: 0;
     }
 
     .subtitle {
@@ -1221,17 +1221,21 @@ body {
     }
 
     .top-controls {
-        top: 1rem;
+        position: relative;
+        top: auto;
         right: auto;
-        left: 50%;
-        transform: translateX(-50%);
+        left: auto;
+        transform: none;
+        margin: 0 auto 1.5rem auto;
         width: max-content;
-        z-index: 1000;
+        z-index: 10;
         background: rgba(13, 17, 23, 0.8);
-        /* Slight bg for readability if needed, or transparent */
-        padding: 0.5rem;
+        padding: 0.5rem 1rem;
         border-radius: 50px;
         backdrop-filter: blur(5px);
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
     }
 
     .control-btn {

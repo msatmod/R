@@ -67,29 +67,34 @@ function animateStatsCard() {
 
     if (!countElement || !barElement || !iconElement) return;
 
-    // Reset for animation
-    countElement.innerText = '0';
-    barElement.style.width = '0%';
-    iconElement.style.left = '0%';
-
-    let count = 0;
+    let startTime = null;
     const target = 30;
-    const duration = 1500;
-    const frames = duration / 16;
-    const increment = target / frames;
+    const duration = 2000; // Smoother, longer animation
 
-    const timer = setInterval(() => {
-        count += increment;
-        if (count >= target) {
-            count = target;
-            clearInterval(timer);
+    const animate = (timestamp) => {
+        if (!startTime) startTime = timestamp;
+        const progressTime = timestamp - startTime;
+        const percentage = Math.min(progressTime / duration, 1);
+
+        // Easing function for premium feel
+        const easeOut = 1 - Math.pow(1 - percentage, 3);
+        const currentCount = Math.floor(easeOut * target);
+        const currentProgress = easeOut * 100;
+
+        countElement.innerText = currentCount;
+        barElement.style.width = currentProgress + '%';
+        iconElement.style.left = currentProgress + '%';
+
+        if (percentage < 1) {
+            requestAnimationFrame(animate);
+        } else {
+            countElement.innerText = target;
+            barElement.style.width = '100%';
+            iconElement.style.left = '100%';
         }
+    };
 
-        const progress = (count / target) * 100;
-        countElement.innerText = Math.floor(count);
-        barElement.style.width = progress + '%';
-        iconElement.style.left = progress + '%';
-    }, 16);
+    requestAnimationFrame(animate);
 }
 
 function dismissSkeletonLoader() {
@@ -365,7 +370,7 @@ function initSecurity() {
 
     // 🥚 Personalized Easter Egg: The Truth in Code
     console.log(
-        "%c📊 R 30-DAY CHALLENGE ARCHIVE %c\n\nAuthorship: Amey Thakur & Mega Satish\nProject: Statistical Research Hub\n\n%c\"A disciplined journey through code and statistical truth.\"",
+        "%c📊 R 30-DAY CHALLENGE ARCHIVE %c\n\nAuthorship: Amey Thakur & Mega Satish\nProject: R Programming Challenge\n\n%c\"Challenge successfully completed with Mega Satish.\"",
         "color: #58a6ff; font-size: 24px; font-weight: bold; font-family: 'Play', sans-serif; text-shadow: 2px 2px 0px rgba(0,0,0,0.2);",
         "color: #f0f6fc; font-size: 16px; font-family: 'Play', sans-serif; font-weight: 500;",
         "color: #bc8cff; font-style: italic; font-size: 14px;"

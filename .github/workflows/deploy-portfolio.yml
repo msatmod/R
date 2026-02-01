@@ -1,4 +1,4 @@
-name: "Deploy R Programming Challenge 🏛️💎"
+name: "Deploy R Programming Challenge"
 
 on:
   push:

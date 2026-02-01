@@ -762,17 +762,17 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    /* Anchor footer to bottom */
 }
 
 .loader-content {
+    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
-    margin-top: -50px;
-    /* Slight offset to account for footer weight */
 }
 
 .splash-footer {
@@ -791,11 +791,11 @@ body {
 }
 
 .loader-r-icon {
-    width: 44px;
-    height: 44px;
+    width: 64px;
+    height: 64px;
     background: var(--accent-blue);
     color: var(--bg-color);
-    border-radius: 12px;
+    border-radius: 16px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -804,14 +804,14 @@ body {
     left: 0;
     transform: translateX(-50%);
     animation: breatheGlow 2.5s ease-in-out infinite;
-    box-shadow: 0 0 20px rgba(88, 166, 255, 0.4);
+    box-shadow: 0 0 30px rgba(88, 166, 255, 0.6);
     z-index: 2;
     transition: left 0.1s linear;
 }
 
 .loader-r-icon svg {
-    width: 24px;
-    height: 24px;
+    width: 32px;
+    height: 32px;
 }
 
 @keyframes breatheGlow {

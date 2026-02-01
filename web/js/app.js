@@ -16,6 +16,15 @@ document.addEventListener('DOMContentLoaded', () => {
     if ('serviceWorker' in navigator) {
         navigator.serviceWorker.register('sw.js').catch(console.error);
     }
+
+    // Fallback: Force dismiss loader if it hangs
+    setTimeout(() => {
+        const loader = document.getElementById('skeleton-loader');
+        if (loader && loader.style.display !== 'none') {
+            console.warn("Forcing loader dismissal due to delay.");
+            dismissSkeletonLoader();
+        }
+    }, 5000);
 });
 
 function moveSplashProgress() {

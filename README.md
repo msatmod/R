@@ -188,21 +188,34 @@ R/
 
 <!-- QUICK START -->
 <a name="quick-start"></a>
-## Resources
+## Quick Start
 
 ### 1. Prerequisites
-- **R Language**: Core runtime environment. [Download R](https://cran.r-project.org/)
-- **RStudio**: Premier IDE for R development. [Download RStudio](https://www.rstudio.com/)
+- **R Language (4.0+)**: Core runtime environment. [Download R](https://cran.r-project.org/)
+- **RStudio IDE**: Premier integrated development environment. [Download RStudio](https://www.rstudio.com/)
 
-### 2. Execution
-Clone the repository to access the complete curriculum:
+> [!WARNING]
+> **Runtime Environment Guard**
+>
+> R scripts are sensitive to directory pathing. Ensure you set your working directory to the **source file location** (`Session > Set Working Directory > To Source File Location`) before execution to prevent `file-not-found` errors during data loading phases.
 
+### 2. Installation & Setup
+
+#### Step 1: Clone the Repository
+Open your terminal and clone the repository:
 ```bash
 git clone https://github.com/Amey-Thakur/R.git
 cd R
 ```
 
-Navigate to any specific day directory (e.g., `Web Scraping in R`) and run the scripts within RStudio.
+#### Step 2: Library Synchronization
+Ensure all required CRAN libraries are installed. Open RStudio and run:
+```r
+install.packages(c("tidyverse", "ggplot2", "rvest", "dplyr", "httr"))
+```
+
+### 3. Execution
+Navigate to any specific day directory (e.g., `Web Scraping in R`) and execute the `.R` scripts directly within the RStudio console.
 
 ---
 

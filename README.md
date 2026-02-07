@@ -1,7 +1,7 @@
 <div align="center">
 
   <a name="readme-top"></a>
-  # <img src="web/assets/Rlogo.png" width="48" height="48" valign="middle"> R Programming Challenge
+  # <img src="web/assets/Rlogo.png" height="55" valign="middle"> <br> R Programming Challenge
 
   [![License: MIT](https://img.shields.io/badge/License-MIT-lightgrey)](LICENSE)
   ![Status](https://img.shields.io/badge/Status-Completed-success)

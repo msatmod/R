@@ -1,7 +1,7 @@
 <div align="center">
 
   <a name="readme-top"></a>
-  # R Programming Challenge
+  # <img src="web/assets/Rlogo.png" width="48" height="48" valign="middle"> R Programming Challenge
 
   [![License: MIT](https://img.shields.io/badge/License-MIT-lightgrey)](LICENSE)
   ![Status](https://img.shields.io/badge/Status-Completed-success)
@@ -317,7 +317,7 @@ Special thanks to the **mentors and peers** whose encouragement, discussions, an
 
   <br>
 
-  🏆 **[R Programming Challenge](https://github.com/Amey-Thakur/R)**
+  <img src="web/assets/Rlogo.png" width="18" height="18" valign="middle"> **[R Programming Challenge](https://github.com/Amey-Thakur/R)**
 
   ---
 

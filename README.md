@@ -317,7 +317,7 @@ Special thanks to the **mentors and peers** whose encouragement, discussions, an
 
   <br>
 
-  <img src="web/assets/Rlogo.png" width="18" height="18" valign="middle"> **[R Programming Challenge](https://github.com/Amey-Thakur/R)**
+  <img src="web/assets/Rlogo.png" width="18" height="18" valign="middle"> **[R Programming Challenge](https://amey-thakur.github.io/R/)**
 
   ---
 

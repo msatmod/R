@@ -37,7 +37,7 @@ jobs:
 
       - name: Convert Notebooks to HTML
         run: |
-          find . -name "*.ipynb" -not -path "./web/*" -exec jupyter nbconvert --to html --template full --output-dir=./web/notebooks {} +
+          find . -name "*.ipynb" -not -path "./web/*" -exec jupyter nbconvert --to html --output-dir=./web/notebooks {} +
           
       - name: List Converted Files
         run: ls -R web/notebooks

@@ -1505,3 +1505,14 @@ body {
     color: var(--bg-color);
     transform: translateY(-5px);
 }
+
+/* Stats Interaction */
+.stats-r-icon {
+    cursor: pointer;
+    pointer-events: auto;
+    transition: transform 0.3s ease;
+}
+
+.stats-r-icon:hover {
+    transform: scale(1.1);
+}

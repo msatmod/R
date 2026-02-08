@@ -10,6 +10,7 @@
     --font-heading: 'Play', sans-serif;
     --font-body: 'Play', sans-serif;
     --shadow-premium: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    --glass-bg: rgba(22, 27, 34, 0.6);
 }
 
 [data-theme="light"] {
@@ -22,6 +23,7 @@
     --accent-purple: #8250df;
     --gradient: linear-gradient(135deg, #0969da, #8250df);
     --shadow-premium: 0 8px 32px 0 rgba(140, 149, 159, 0.2);
+    --glass-bg: rgba(255, 255, 255, 0.7);
 }
 
 * {
@@ -976,6 +978,20 @@ body {
     transition: width 0.1s linear;
 }
 
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
 .loader-text {
     color: var(--text-primary);
     font-family: var(--font-body);
@@ -1245,7 +1261,19 @@ body {
     }
 
     .glass-panel {
-        padding: 1.5rem 1rem;
+        background: linear-gradient(-45deg, var(--glass-bg), rgba(88, 166, 255, 0.1), var(--glass-bg), rgba(188, 140, 255, 0.1));
+        background-size: 400% 400%;
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border: 1px solid var(--border-color);
+        border-radius: 24px;
+        padding: 4rem;
+        box-shadow: var(--shadow-premium);
+        position: relative;
+        max-width: 1100px;
+        margin: 0 auto;
+        animation: gradientBG 15s ease infinite;
+        transition: all 0.4s ease;
     }
 
     .header-content {
@@ -1443,4 +1471,37 @@ body {
 
 .control-icon-btn.download-action:hover {
     color: var(--accent-blue);
+}
+
+/* Back to Top Button */
+#back-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 50px;
+    height: 50px;
+    background: var(--panel-bg);
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 4999;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+#back-to-top.visible {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+#back-to-top:hover {
+    background: var(--accent-blue);
+    color: var(--bg-color);
+    transform: translateY(-5px);
 }

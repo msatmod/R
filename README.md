@@ -47,7 +47,7 @@
 <a name="overview"></a>
 ## Overview
 
-**R Programming Challenge** was conceived as a rigorous collaborative initiative between [**Amey Thakur**](https://github.com/Amey-Thakur) and [**Mega Satish**](https://github.com/msatmod). Driven by a shared objective to master the R language, this project represents the culmination of a disciplined 30-day coding journey. Through mutual dedication and daily practice, we successfully navigated the curriculum, from foundational logic to advanced automation, earning recognized certifications as a testament to this scholarly effort.
+**R Programming Challenge** was conceived as a disciplined collaborative initiative between [**Amey Thakur**](https://github.com/Amey-Thakur) and [**Mega Satish**](https://github.com/msatmod). Driven by a shared objective to master the R language, this project represents the culmination of a disciplined 30-day coding journey. Through mutual dedication and daily practice, we successfully navigated the curriculum, from foundational logic to advanced automation, earning recognized certifications as a testament to this scholarly effort.
 
 The project demonstrates a disciplined approach to upskilling in Data Science, leveraging the **R Ecosystem** (RStudio, Tidyverse, ggplot2) to solve real-world analytical problems.
 
@@ -60,7 +60,7 @@ The curriculum is governed by strict **computational data science principles**:
 > [!TIP]
 > **Challenge Completion**
 >
-> This repository represents the successful completion of a rigorous **30-Day Coding Challenge**. Challenge successfully completed with [**Mega Satish**](https://github.com/msatmod/R). Each directory corresponds to specific daily milestones, ensuring a linear and verifiable progression of skills.
+> This repository represents the successful completion of a disciplined **30-Day Coding Challenge**. Challenge successfully completed with [**Mega Satish**](https://github.com/msatmod/R). Each directory corresponds to specific daily milestones, ensuring a linear and verifiable progression of skills.
 
 ---
 

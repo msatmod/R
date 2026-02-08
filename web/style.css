@@ -10,7 +10,7 @@
     --font-heading: 'Play', sans-serif;
     --font-body: 'Play', sans-serif;
     --shadow-premium: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-    --glass-bg: rgba(22, 27, 34, 0.6);
+    --glass-bg: rgba(22, 27, 34, 0.4);
 }
 
 [data-theme="light"] {
@@ -23,7 +23,7 @@
     --accent-purple: #8250df;
     --gradient: linear-gradient(135deg, #0969da, #8250df);
     --shadow-premium: 0 8px 32px 0 rgba(140, 149, 159, 0.2);
-    --glass-bg: rgba(255, 255, 255, 0.7);
+    --glass-bg: rgba(255, 255, 255, 0.4);
 }
 
 * {
@@ -1261,7 +1261,7 @@ body {
     }
 
     .glass-panel {
-        background: linear-gradient(-45deg, var(--glass-bg), rgba(88, 166, 255, 0.1), var(--glass-bg), rgba(188, 140, 255, 0.1));
+        background: linear-gradient(-45deg, var(--glass-bg), rgba(88, 166, 255, 0.25), var(--glass-bg), rgba(188, 140, 255, 0.25));
         background-size: 400% 400%;
         backdrop-filter: blur(20px);
         -webkit-backdrop-filter: blur(20px);

@@ -1272,7 +1272,7 @@ body {
         position: relative;
         max-width: 1100px;
         margin: 0 auto;
-        animation: gradientBG 15s ease infinite;
+        animation: slideUpFade 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards, gradientBG 15s ease infinite;
         transition: all 0.4s ease;
     }
 

@@ -1,20 +1,34 @@
 # R - Programming Challenge Repository
 * text=auto eol=lf
 
-# LINGUIST OPTIMIZATION - FORCE R DOMINANCE
+# LINGUIST OPTIMIZATION - FORCE R DOMINANCE & SEARCHABILITY
+# Explicitly force .ipynb to be counted as R and make them searchable/clickable
 *.ipynb linguist-language=R
+*.ipynb -linguist-vendored
+*.ipynb -linguist-generated
+*.ipynb -linguist-documentation
 *.ipynb linguist-detectable=true
 
-# Force R dominance by hiding generated/web exports
-"web/**" linguist-vendored
-"web/**" linguist-detectable=false
-"docs/**" linguist-documentation
-"docs/**" linguist-detectable=false
-"Mega/**" linguist-vendored
-"Mega/**" linguist-detectable=false
-"Certificates/**" linguist-vendored
-"Certificates/**" linguist-detectable=false
-
-# Keep R scripts as the only primary detectable logic
+# Force R scripts to be primary logic
+*.R linguist-language=R
+*.R -linguist-vendored
 *.R linguist-detectable=true
+
+*.r linguist-language=R
+*.r -linguist-vendored
 *.r linguist-detectable=true
+
+# Force R dominance by HIDING high-volume non-logic assets
+"web/**" linguist-vendored
+"web/**" -linguist-detectable
+"docs/**" linguist-documentation
+"docs/**" -linguist-detectable
+"Mega/**" linguist-vendored
+"Mega/**" -linguist-detectable
+"Certificates/**" linguist-vendored
+"Certificates/**" -linguist-detectable
+
+# Metadata handled as documentation
+*.md linguist-documentation
+*.cff linguist-documentation
+codemeta.json linguist-documentation

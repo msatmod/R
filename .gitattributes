@@ -1,19 +1,36 @@
 # R - Programming Challenge Repository
 * text=auto eol=lf
 
-# LINGUIST OPTIMIZATION - FORCE R DOMINANCE & SEARCHABILITY
-# Consolidate rules to ensure files are searchable and clickable
-*.ipynb linguist-language=R linguist-detectable=true linguist-vendored=false linguist-generated=false
-*.R     linguist-language=R linguist-detectable=true linguist-vendored=false
-*.r     linguist-language=R linguist-detectable=true linguist-vendored=false
+# LINGUIST OPTIMIZATION - FORCE R DOMINANCE & CLICKABILITY
+*.ipynb linguist-language=R
+*.R linguist-language=R
+*.r linguist-language=R
 
-# Force R dominance by HIDING high-volume non-logic assets
-"web/**" linguist-vendored linguist-detectable=false
-"docs/**" linguist-documentation linguist-detectable=false
-"Mega/**" linguist-vendored linguist-detectable=false
-"Certificates/**" linguist-vendored linguist-detectable=false
+# Explicitly Ensure Source Directories are searchable
+"Data Science with R Programming/**" -linguist-vendored
+"Data Science with R Programming/**" linguist-detectable=true
+"Getting Started with R Programming/**" -linguist-vendored
+"Getting Started with R Programming/**" linguist-detectable=true
+"R Libraries For Automated EDA/**" -linguist-vendored
+"R Libraries For Automated EDA/**" linguist-detectable=true
+"R Programming for Beginners - SkillUP by Simplilearn/**" -linguist-vendored
+"R Programming for Beginners - SkillUP by Simplilearn/**" linguist-detectable=true
+"Statistical Analysis on Covid19 Dataset/**" -linguist-vendored
+"Statistical Analysis on Covid19 Dataset/**" linguist-detectable=true
+"Web Scraping in R/**" -linguist-vendored
+"Web Scraping in R/**" linguist-detectable=true
 
-# Metadata handled as documentation
+# Nuclear Hiding for Non-Essential Assets
+"web/**" linguist-vendored
+"web/**" linguist-detectable=false
+"docs/**" linguist-documentation
+"docs/**" linguist-detectable=false
+"Mega/**" linguist-vendored
+"Mega/**" linguist-detectable=false
+"Certificates/**" linguist-vendored
+"Certificates/**" linguist-detectable=false
+
+# Metadata
 *.md linguist-documentation
 *.cff linguist-documentation
 codemeta.json linguist-documentation

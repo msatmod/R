@@ -1,0 +1,16 @@
+# R - Programming Challenge Repository
+* text=auto eol=lf
+
+# LINGUIST OPTIMIZATION - FORCE R DOMINANCE
+*.ipynb linguist-language=R
+*.html linguist-language=R
+
+# Vendor non-essential assets and exports to keep stats focused on core R logic
+web/** linguist-vendored
+docs/** linguist-vendored
+Mega/** linguist-vendored
+Certificates/** linguist-vendored
+
+# Ensure signatures are handled correctly
+*.rb text diff=ruby
+*.md linguist-documentation

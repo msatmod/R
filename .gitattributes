@@ -3,14 +3,18 @@
 
 # LINGUIST OPTIMIZATION - FORCE R DOMINANCE
 *.ipynb linguist-language=R
-*.html linguist-language=R
+*.ipynb linguist-detectable=true
 
-# Vendor non-essential assets and exports to keep stats focused on core R logic
-web/** linguist-vendored
-docs/** linguist-vendored
-Mega/** linguist-vendored
-Certificates/** linguist-vendored
+# Force R dominance by hiding generated/web exports
+"web/**" linguist-vendored
+"web/**" linguist-detectable=false
+"docs/**" linguist-documentation
+"docs/**" linguist-detectable=false
+"Mega/**" linguist-vendored
+"Mega/**" linguist-detectable=false
+"Certificates/**" linguist-vendored
+"Certificates/**" linguist-detectable=false
 
-# Ensure signatures are handled correctly
-*.rb text diff=ruby
-*.md linguist-documentation
+# Keep R scripts as the only primary detectable logic
+*.R linguist-detectable=true
+*.r linguist-detectable=true

@@ -9,13 +9,13 @@
 
   **[View Interactive Portfolio](https://Amey-Thakur.github.io/R/)**
 
-  <br>
-
-  <img src=".github/social-preview.png" alt="R Programming Challenge" width="90%">
-
   A disciplined 30-day collaborative challenge undertaken to master R programming, statistical analysis, and data science, featuring a structured curriculum from basic syntax to advanced web scraping and certification.
 
   **[Curriculum](#features)** &nbsp;·&nbsp; **[Amey's Kaggle](https://www.kaggle.com/ameythakur20)** &nbsp;·&nbsp; **[Mega's Kaggle](https://www.kaggle.com/megasatish)** &nbsp;·&nbsp; **[Certifications](#results)**
+
+  <br>
+
+  <img src=".github/social-preview.png" alt="R Programming Challenge" width="90%">
 
 </div>
 
